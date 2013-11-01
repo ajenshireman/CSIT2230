@@ -16,8 +16,6 @@ Test pages for figuring out how includes in php work.
 /site
 ----
 
-Collection Manager, a semester-long project for CSIT 2230.
-
 Collection Manager is a web-based application for cataloguing, searching, and displaying collections. This first version is made specifically for movie collections, but once completed it will be expanded for collections of any sort.
 
 Collection Manager will allow you to keep track of your movies, what format you have them in, and other important information such as release year, director, actors, and much more.
