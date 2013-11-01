@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="ico/favicon.png" />
+
+    <title>Collection Manager</title>
+	
+	<!-- Normalize.css -->
+	<link href="css/normalize.css" rel="stylesheet" />
+	
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Custom styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- Wrapper for page content -->
+    <div id="wrap">
+        <!-- Navbar, fixed to top of screen -->
+        <header class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Collection Manager</a>
+                </div>
+                <nav class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="about.html">About</a></li>
+                        <li class="dropdown">
+	      <a href="#" class="dropdown-toggle" data-toggle="dropdown">What's New <b class="caret"></b></a>
+	      <ul class="dropdown-menu">
+		<li><a href="changelog.html">Change Log</a></li>
+		<li><a href="archive/index.html">Archive</a></li>
+	      </ul>
+	    </li>
+                    </ul>
+		    <!-- Search bar -->
+          <form class="navbar-form">
+            <span class="input-group">
+              <input type="search" class="form-control pull-right" id="searchBox" placeholder="Search" />
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-default" id="searchButton">
+                    <span class=" glyphicon glyphicon-search"></span>
+                  </button>
+                </span>
+            </span>
+          </form>
+                </nav><!--/.nav-collapse -->
+            </div>
+        </header>
+        <!-- /navbar -->
+        
+        <!-- Begin page content -->
+        <div class="container" id="body">
+            
+            <div class="text-left">
+                <h2>About Collection Manager</h2>
+                <p>
+                    Collection Manager is a web-based application for cataloguing, searching, and displaying collections. This first version is made specifically for movie collections, but once completed it will be expanded for collections of any sort.
+                </p>
+                <p>
+                    Collection Manager will allow you to keep track of your movies, what format you have them in, and other important information such as release year, director, actors, and much more.
+                </p>
+                <p>
+                    Planned features include:
+                    <ul>
+                        <li>Search movies by title, year, director, genre, etc.</li>
+                        <li>Custom tags for movies</li>
+                        <li>Rating system for your movies</li>
+                        <li>Display your libray on a virtual shelf</li>
+                        <li>Stream digital media directly to your browser</li>
+                        <li>Pick a movie to watch at random</li>
+                        <li>Mobile intergration: do all this from your Android (and maybe iOS) device</li>
+                    </ul>
+                </p>
+                <p>
+                    This is a semester-long project for CSIT 2230: Intro to Internet Software Dev at Pelllissippi State Community College.
+                </p>
+            </div>
+
+        </div><!-- /.container -->
+        <!-- /content -->
+    </div>
+    <!-- /wrapper -->
+        
+    <!-- Footer, stuck to bottom of content or bottom of page if content is shorter than window height -->
+    <footer id="footer">
+        <div class="container">
+            <p class="text-muted credit">
+                Some Text Here
+            </p>
+        </div>
+    </footer>
+    <!-- /footer -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

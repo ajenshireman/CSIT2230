@@ -1,0 +1,35 @@
+<?php
+echo 'basename(__FILE__):<br />'.basename(__FILE__).'<br />';
+echo '$_SERVER[\'DOCUMENT_ROOT\']:<br />'.$_SERVER['DOCUMENT_ROOT'].'<br />';
+echo 'dirname(__FILE__):<br />'.dirname(__FILE__).'<br />';
+echo 'including php/classes/class.php<br />';
+echo '<br />';
+include 'php/classes/class.php';
+echo 'including dirname(__FILE__).\'/classes/class.php\'<br />';
+include dirname(__FILE__).'/classes/class.php';
+echo '<br />';
+echo 'set_include_path $GLOBALS[\'workingDir\']<br />';
+set_include_path($GLOBALS['workingDir']);
+echo $GLOBALS['workingDir'].'<br />';
+echo 'including /php/classes/class.php<br />';
+include '/php/classes/class.php';
+echo '<br />';
+echo 'Including $_SERVER[\'DOCUMENT_ROOT\'].\'/export/home/students/c2230a/c2230a16/public_html/dirTest/php/classes/class.php\'<br />';
+include $_SERVER['DOCUMENT_ROOT'].'/export/home/students/c2230a/c2230a16/public_html/dirTest/php/classes/class.php';
+echo '<br />';
+echo 'Including $_SERVER[\'DOCUMENT_ROOT\'].\'/dirTest/php/classes/class.php\'<br />';
+include $_SERVER['DOCUMENT_ROOT'].'/dirTest/php/classes/class.php';
+echo '<br />';
+echo 'Including $_SERVER[\'DOCUMENT-ROOT\'].\'~c2230a16/dirTest/php/classes/class.php\'<br />';
+include $_SERVER['DOCUMENT-ROOT'].'~c2230a16/dirTest/php/classes/class.php';
+echo '<br />';
+$path = '/export/home/students/c2230a/c2230a16/public_html/dirTest';
+echo '$path = '.$path.'<br />';
+echo 'including $path.\'/php/classes/class.php\'<br />';
+include $path.'/php/classes/class.php';
+echo '<br />';
+$path = '/~c230a16/dirTest';
+echo '$path = '.$path.'<br />';
+echo 'including $path.\'/php/classes/class.php\'<br />';
+include $path.'/php/classes/class.php';
+?>

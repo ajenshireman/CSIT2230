@@ -1,0 +1,44 @@
+/**
+ * cmStyles.css
+ * Author: Ajen Shireman
+ * 
+ * External Stylesheet for Collection Manager app.
+ * Use coreStyles.css for general formatting and class definitions
+ * This file contains custom setting for the Collection Manager app
+ * 
+ */
+ 
+ body {
+    padding-top: 60px;
+ }
+ 
+ .navbar {
+    background: #060606;
+}
+
+.navbar-header {
+    color: #f0f0f0;
+    display: inline-block;
+}
+
+.navbar-brand > a {
+    color: #f0f0f0;
+	text-decoration: none;
+}
+
+.navbar-nav  {
+    color: #f0f0f0;
+}
+
+.footer {
+    background: #f0f0f0;
+}
+
+.navbar-nav li > a {
+	color: #a0a0a0;
+	text-decoration: none;
+}
+
+.navbar-nav li > a:hover {
+	color: #f0f0f0;
+}
