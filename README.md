@@ -24,13 +24,13 @@ Collection Manager will allow you to keep track of your movies, what format you 
 
 Planned features include:
 
-*Search movies by title, year, director, genre, etc.
-*Custom tags for movies
-*Rating system for your movies
-*Display your libray on a virtual shelf
-*Stream digital media directly to your browser
-*Pick a movie to watch at random
-*Mobile intergration: do all this from your Android (and maybe iOS) device
+*Search movies by title, year, director, genre, etc.  
+*Custom tags for movies  
+*Rating system for your movies  
+*Display your libray on a virtual shelf  
+*Stream digital media directly to your browser  
+*Pick a movie to watch at random  
+*Mobile intergration: do all this from your Android (and maybe iOS) device  
 
 This is a semester-long project for CSIT 2230: Intro to Internet Software Dev at Pelllissippi State Community College.
 
