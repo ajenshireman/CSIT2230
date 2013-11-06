@@ -2,36 +2,44 @@
 /*
  * Class for logging users in and out
  */
+require_once 'lib/password.php';
 require_once 'classes/DB.php';
 require_once 'classes/User.php';
 
-class UserTools {
-    // Hash a password
-    public static function hash ( $password ) {
-        return md5($password);
-    }
-    
+class UserTools {    
     // Log the user in.
     // First check to see if the username and password match a row in the database.
     // If successful, set the session variables and store the user object within.
     public function login ( $username, $password ) {
-        $hashedPassword = $this->hash($password);
         $db = new DB();
         
+        // look up the user name in the db
         $queryArgs = array(
             'select' => '*',
             'from' => $_SESSION['userTable'],
-            'where' => "username = '$username' and password = '$hashedPassword'"
+            'where' => "username = '$username'"
         );
         $result = $db->select($queryArgs);
         
+        // see if the username exists
         if ( count($result) == 1 ) {
-            $user = new User($result[0]);
-            $_SESSION['user'] = serialize($user);
-            $_SESSION['login_time'] = time();
-            $_SESSION['logged_in']  = 1;
-            return true;
+            // if the username exists the hashedPassword
+            $userData = $result[0];
+            
+            //  verify the given password against the stored password and salt
+            if ( password_verify($password, $userData['password']) ) {
+                // if the password is good, create a new User object with the pulled data
+                $user = new User($userData);
+                $_SESSION['user'] = serialize($user);
+                $_SESSION['login_time'] = time();
+                $_SESSION['logged_in']  = 1;
+                return true;
+            } else {
+                // Wirong password
+                return false;
+            }
         } else {
+            // User not found
             return false;
         }
     }

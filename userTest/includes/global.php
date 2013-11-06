@@ -1,5 +1,6 @@
 <?php
 // Include global classes and scripts
+require_once 'lib/password.php';
 require_once 'classes/DB.php';
 require_once 'classes/User.php';
 require_once 'classes/UserTools.php';
@@ -22,7 +23,6 @@ $userTools = new UserTools();
 // Start the session
 session_name('c2230a16');
 session_start();
-$sessionName = session_name();
 $_SESSION['userTable'] = 'userTest';
 
 // Refresh the session varibles if the user is logged in

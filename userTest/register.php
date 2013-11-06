@@ -42,7 +42,7 @@ if ( isset($_POST['btnSubmit']) ) {
         // Package the data for saving in a new user object
         $data = array(
             'username' => $username,
-            'password' => UserTools::hash($password),
+            'password' => password_hash($password, PASSWORD_BCRYPT),
             'email'    => $email
         );
         
@@ -71,15 +71,15 @@ if ( isset($_POST['btnSubmit']) ) {
 <body>
     <form role="form" method="post" action="register.php">
         <label for="input_username">Username: </label>
-        <input type="text" id="input_username" name="username" placeholder="Username"/>
+        <input type="text" id="input_username" name="username" placeholder="Username" required />
         <label for="input_password">Password: </label>
-        <input type="password" id="input_password" name="password" placeholder=""/>
+        <input type="password" id="input_password" name="password" placeholder="" required />
         <label for="confirm_password">Re-type Password: </label>
-        <input type="password" id="confirm_password" name="password_confirm" placeholder=""/>
+        <input type="password" id="confirm_password" name="password_confirm" placeholder="" required />
         <label for="input_email">Email: </label>
-        <input type="text" id="input_email" name="email" placeholder="Email"/>
+        <input type="text" id="input_email" name="email" placeholder="Email" required />
         <button type="submit" name="btnSubmit" value="Submit">Submit</button>
-        <button type="cancel" name="btnCancel" value="Cancel">Cancel</button>
+        <button type="cancel" name="btnCancel" value="Cancel" formnovalidate>Cancel</button>
     </form>
 </body>
 </html>
