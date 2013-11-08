@@ -1,3 +1,6 @@
+<?php
+require_once 'includes/global.php';
+?>
 <!DOCTYPE htm>
 <html>
 <head>
@@ -5,6 +8,28 @@
     <script src="js/fileUpload.js"></script>
 </head>
 <body>
+    <?php
+    
+    $queryArgs = array(
+        'select' => "*",
+        'from'   => 'upload',
+    );
+    $results = $db->select($queryArgs);
+    if ( count($results) > 0 ) {
+        foreach ( $results as $result ) {
+            $fileLocation = $result['filePath'].$result['fileName'];
+            $fileSize = bytesToSize($result['fileSize']);
+            echo <<<TABLE
+    <div>
+        <img src="$fileLocation" />
+        <p>Name: {$result['fileName']} Size: {$fileSize} Location: {$result['filePath']}</p>
+    </div>
+TABLE;
+        }
+    }
+    
+    ?>
+    
     <form id="uploadForm" enctype="multipart/form-data" method="post" action="upoad.php">
         <div>
             <label for="uploadedFile">Choose a file to upload: </label>
