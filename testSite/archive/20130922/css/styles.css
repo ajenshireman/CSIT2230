@@ -1,0 +1,257 @@
+html,
+body {
+    height: 100%;
+}
+
+#body {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* classes for sticky footer */
+/* wrapper for all page content */
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by its height */
+    margin: 0 auto -40px;
+    /* Pad bottom by footer height */
+    padding: 0 0 40px;
+}
+
+#wrap > .container {
+    padding-top: 60px
+}
+
+/* footer */
+#footer {
+    height: 40px;
+    background-color: #f0f0f0;
+}
+
+#footer > .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container .credit {
+    margin-top: 10px;
+}
+
+#footer p {
+    display: inline-block;
+}
+
+/* Scrolling stream of images of items in the collection */
+.collection {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.collection-header {
+    margin-bottom: 5px;
+}
+
+.collection h1,
+.collection h2 {
+    display: inline;
+}
+
+.btn-collection {
+    display: inline;
+}
+
+.collection-slider {
+    height: 150px;
+	min-height: 150px;
+    margin-bottom: 20px;
+    /*border: solid 2px red;*/
+    overflow: hidden;
+}
+
+.collection-item {
+    display: inline;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.itemDetails h4 {
+    display: inline;
+    color: red;
+}
+
+/* info for collection item */
+.itemInfo {
+	height: auto;
+    min-height: 300px;
+    /*border: solid 2px black;*/
+    padding: 5px;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	background-color: #f0f0f0;
+}
+
+.itemDetails > .btn-collection {
+    margin: 10px;
+}
+
+.itemImage {
+    height: 300px;
+    margin: 5px 0px 5px;
+}
+
+.itemImageSmall {
+    height: 150px;
+    /*margin-left: 2px;
+    margin-right: 2px;*/
+}
+
+.itemDetails .list-group {
+    margin-bottom: 0;
+}
+
+.itemDetails .list-group-item {
+    background-color: inherit;
+    border: none;
+    padding: 5px;
+}
+
+.itemDetails {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.itemInfo-header {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0px;
+}
+
+@media (min-width: 768px) {
+    .itemInfo-header {
+        text-align: left;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.infoInput .form-group {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+@media screen and (min-width: 768px){
+    .infoInput .form-group {
+        margin-right: 30px;
+        margin-left: -30px;
+    }
+}
+
+.btn-rating:hover{
+    background-color: #ffffff;
+}
+
+/* bootstrap overrides */
+/* Navbar */
+/*
+.navbar {
+    background-color: #f0f0f0;
+}
+
+.navbar-brand {
+    color: #0f0f0f;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #0f0f0f;
+}
+
+.navbar-nav > li > a {
+    color: #0f0f0f;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+    color: #0f0f0f;
+    background-color: #a0a0a0;
+}
+
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #0f0f0f;
+}
+*/
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #a0a0a0;
+}
+
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+    background-color: #a0a0a0;
+}
+
+/* navbar inverse */
+.navbar-inverse {
+    background-color: #3f3f3f;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+    color: #f0f0f0;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #a0a0a0;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #f0f0f0;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #f0f0f0;
+    background-color: #0f0f0f;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #0f0f0f;
+}
+
+.navbar-inverse .navbar-nav .dropdown-menu, 
+.navbar-inverse .navbar-nav .open .dropdown-menu {
+    background-color: #3f3f3f;
+}
+
+.navbar-inverse  .navbar-nav .dropdown-menu > li > a, 
+.navbar-inverse  .navbar-nav .open .dropdown-menu > li > a {
+    color: #a0a0a0;
+}
+
+.navbar-inverse .navbar-nav .dropdown-menu > li > a:hover,
+.navbar-inverse .navbar-nav .dropdown-menu > li > a:focus,
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #f0f0f0;
+	background-color: #0f0f0f;
+}
+
+#searchBox {
+    margin-top: 3px;
+    height: 30px;
+    width: 200px;
+}
+
+#searchButton {
+    margin-top: 3px;
+    height: 30px;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="ico/favicon.png" />
+
+  <title>Collection Manager</title>
+
+  <!-- Normalize.css -->
+  <link href="css/normalize.css" rel="stylesheet" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/styles.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="../../assets/js/html5shiv.js"></script>
+    <script src="../../assets/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div id="wrap">
+    <!-- navbar, fixed to top of screen -->
+    <header class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Collection Manager</a>
+        </div>
+        <nav class="navbar-collapse collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="changelog.html">What's New</a></li>
+          </ul>
+          <!-- Search bar -->
+          <form class="navbar-form">
+            <span class="input-group">
+              <input type="search" class="form-control pull-right" id="searchBox" placeholder="Search" />
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-default" id="searchButton">
+                    <span class=" glyphicon glyphicon-search"></span>
+                  </button>
+                </span>
+            </span>
+          </form>
+        </nav><!--/.nav-collapse -->
+          <!-- /searchBar -->
+      </div>
+    </header>
+    <!-- /navbar -->
+    
+    <!-- begin page content -->
+    <div class="container" id="body">
+      <form class="form-horizontal infoInput" role="form">
+	<div class="form-group">
+	  <label for="titleInput" class="col-xs-12 col-sm-2 control-label">Title</label>
+	  <div class="co-xs-12 col-sm-10">
+	    <input type="text" class="form-control" id="titleInput" placeholder="Title" />
+	  </div>
+	</div>
+	<div class="form-group">
+	  <label for="yearInput" class="col-xs-12 col-sm-2 control-label">Year</label>
+	  <div class="co-xs-12 col-sm-10">
+	    <input type="text" class="form-control" id="yearInput" placeholder="Year" />
+	  </div>
+	</div>
+	<div class="form-group">
+	  <label for="descriptionInput" class="col-xs-12 col-sm-2 control-label">Description</label>
+	  <div class="col-xs-12 col-sm-10">
+	    <input type="text" class="form-control" id="descriptionInput" placeholder="Description" />
+	  </div>
+	</div>
+	<div class="form-group">
+	  <label for="studioInput" class="col-xs-12 col-sm-2 control-label">Studio</label>
+	  <div class="co-xs-12 col-sm-10">
+	    <input type="text" class="form-control" id="studioInput" placeholder="Studio" />
+	  </div>
+	</div>
+	<div class="form-group">
+	  <label for="producerInput" class="col-xs-12 col-sm-2 control-label">Producer</label>
+	  <div class="co-xs-12 col-sm-10">
+	    <input type="text" class="form-control" id="producerInput" placeholder="Producer" />
+	  </div>
+	</div>
+	<div class="form-group">
+	  <label for="directorInput" class="col-xs-12 col-sm-2 control-label">Director</label>
+	  <div class="co-xs-12 col-sm-10">
+	    <input type="text" class="form-control" id="directorInput" placeholder="Director" />
+	  </div>
+	</div>
+	<div class="form-group">
+	  <label for="actorsInput" class="col-xs-12 col-sm-2 control-label">Actors</label>
+	  <div class="co-xs-12 col-sm-10">
+	    <input type="text" class="form-control" id="actorsInput" placeholder="Starring" />
+	  </div>
+	</div>
+	<div class="form-group">
+	  <label for="genreInput" class="col-xs-12 col-sm-2 control-label">Genre</label>
+	  <div class="co-xs-12 col-sm-10">
+	    <input type="text" class="form-control" id="genreInput" placeholder="Genre" />
+	  </div>
+	</div>
+	
+	<div class="form-group">
+	  <div class="col-xs-12 col-sm-offset-2 col-sm-10">
+	    <button type="submit" class="btn btn-default">Submit</button>
+	    <button type="cancel" class="btn btn-default">Cancel</button>
+	  </div>
+	</div>
+      </form>
+    </div>
+  </div>
+  <!-- /wrapper -->
+  
+  <!-- sticky footer -->
+  <footer id="footer">
+    <div class="container">
+      <p class="text-muted credit">
+        Some Text Here
+      </p>
+    </div>
+  </footer>
+  <!-- /footer -->
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+ 
+  <!-- Custom JavaScript -->
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

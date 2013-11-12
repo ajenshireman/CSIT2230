@@ -1,0 +1,90 @@
+/**
+ * coretyles.css
+ * Author: Ajen Shireman
+ * 
+ * Hopefully this will be a useful general stylesheet, with a lot of general classes which can be applies to any website
+ * Webpages will add their own .css to modify thes classes and styles to create thier own look, but this should help make the layout much simpler.
+ */
+ 
+ /* Basic Elements */
+ html {
+    font-family: helvetica, sans-sefif;
+ }
+ 
+ body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #09f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.navbar-brand {
+    font-size: 105%;
+}
+
+/* Classes */
+.container {
+    width: 75%;
+    min-width: 800px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+    font-size: large;
+    margin: 0;
+	padding: 5px;
+    min-height: 40px;
+}
+
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+
+.navbar-fixed-top {
+    top: 0;
+}
+
+.navbar-fixed-bottom {
+    bottom: 0;
+}
+
+.navbar-header {
+    padding: -15px;
+}
+
+.navbar-nav > li {
+	padding-left: 5px;
+	padding-right: 5px;
+    display: inline-block;
+    list-style-type: none;
+}
+
+.navbar-nav li > a {
+    color: #f0f0f0;
+}
+
+.footer {
+    margin: 0;
+    padding: 5px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-size: small;
+}
+
+.footer-fixed {
+    position: fixed;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="ico/favicon.png" />
+
+    <title>Collection Manager</title>
+	
+	  <!-- Normalize.css -->
+	  <link href="css/normalize.css" rel="stylesheet" />
+	
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div id="wrap">
+    <!-- navbar, fixed to top of screen -->
+    <header class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Collection Manager</a>
+        </div>
+        <nav class="navbar-collapse collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="changelog.html">What's New</a></li>
+          </ul>
+          <!-- Search bar -->
+          <form class="navbar-form">
+            <span class="input-group">
+              <input type="search" class="form-control pull-right" id="searchBox" placeholder="Search" />
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-default" id="searchButton">
+                    <span class=" glyphicon glyphicon-search"></span>
+                  </button>
+                </span>
+            </span>
+          </form>
+        </nav><!--/.nav-collapse -->
+          <!-- /searchBar -->
+      </div>
+    </header>
+    <!-- /navbar -->
+    
+    <!-- begin page content -->
+    <div class="container">
+	
+      <div id="body">
+        <div class="collection">
+          <div class="row collection-header">
+            <div class="col-sm-8 col-md-9">
+              <h1>Your Collection</h1>
+            </div>
+            <div class="col-sm-4 col-md-3">
+              <button type="button" class="btn btn-default btn-collection">
+                <span class="glyphicon glyphicon-random"></span> Random
+              </button>
+              <button type="button" class="btn btn-default btn-collection">
+                <span class="glyphicon glyphicon-edit"></span> Edit
+              </button>
+            </div>
+          </div>
+          <div class="coverFlow">
+              <img src="img/covers/150/captainAmericaTheFirstAvenger_150.jpg" class="pull-left" />
+              <h2>Scrolling stream of movie covers</h2>
+          </div>
+        </div>
+        
+        <div class="row itemInfo">
+          <div class="col-xs-12 col-sm-4 col-md-3 text-center">           
+            <img src="img/covers/300/captainAmericaTheFirstAvenger_300.jpg" class="itemImage" />
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-9">
+            <div class="col-xs-12 itemInfo-header"><!--8 col-sm-9 col-md-10">-->
+              <h4>Movie Title (Year)</h4>
+            </div>
+            <div class="col-xs-12 itemInfo-header">
+              <button type="button" class="btn btn-default btn-collection">
+                <span class="glyphicon glyphicon-star"> </span>
+                <span class="glyphicon glyphicon-star"> </span>
+                <span class="glyphicon glyphicon-star"> </span>
+                <span class="glyphicon glyphicon-star"> </span>
+                <span class="glyphicon glyphicon-star"> </span>
+              </button>
+              <button type="button" class="btn btn-default btn-collection">
+                <span class="glyphicon glyphicon-thumbs-up"> </span>
+              </button>
+            </div>
+            <div class="col-xs-12 itemDetails">
+              <ul class="list-group">
+                <li class="list-group-item">Description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </li>
+                <li class="list-group-item">Format: DVD, Blu-ray, Digital</li>
+                <li class="list-group-item">Studio:</li>
+                <li class="list-group-item">Director:</li>
+                <li class="list-group-item">Producer:</li>
+                <li class="list-group-item">Starring:</li>
+                <li class="list-group-item">Genre</li>
+                <li class="list-group-item">[Action] [Super Heroes] [Comic Book] [Avengers]</li>
+              </ul>
+            </div>
+          </div>
+        </div>        
+        
+        <div class="collection">
+          <div class="row collection-header">
+            <div class="col-sm-8 col-md-9">
+              <h2>Sub-Collection 1</h2>
+            </div>
+            <div class="col-sm-4 col-md-3">
+              <button type="button" class="btn btn-default btn-collection">
+                <span class="glyphicon glyphicon-random"></span> Random
+              </button>
+              <button type="button" class="btn btn-default btn-collection">
+                <span class="glyphicon glyphicon-edit"></span> Edit
+              </button>
+            </div>
+          </div>
+          <div class="coverFlow">
+            <img src="img/covers/150/captainAmericaTheFirstAvenger_150.jpg" class="pull-left" />
+            <h2>Scrolling stream of movie covers</h2>
+          </div>
+        </div>
+      </div>
+	
+    </div><!-- /.container -->
+    
+    </div>
+    <!-- /wrapper -->
+    
+    <!-- sticky footer -->
+    <footer id="footer">
+      <div class="container">
+        <p class="text-muted credit">
+          Some Text Here
+        </p>
+      </div>
+    </footer>
+    <!-- /footer -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
