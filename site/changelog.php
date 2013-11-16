@@ -17,6 +17,22 @@ require_once('./includes/head.php');
           <div class="text-left">
               <h3>Changelog</h3>
 	      <p>
+		<h4>2013-11-11</h4>
+		<ul>
+		    <li><strong>Test Week</strong>
+			<ul>
+			    <li>Reviewed work done on classmates' sites</li>
+			    <li>Posted <a href="http://blogs.pstcc.edu/awshireman/2013/11/12/csit-2230-week-10-part-2/">blog</a> with 'contract' for final exam work</li>
+			</ul>
+		    </li>
+		    <li><strong>Ajax/PHP</strong>
+			<ul>
+			    <li>Basic file upload is working. Test page is <a href="http://ps11.pstcc.edu/~c2230a16/week10">here</a>.</li>
+			</ul>
+		    </li>
+		</ul>
+	      </p>
+	      <p>
 		<h4>2013-10-8</h4>
 		<ul>
 		    <li>Very little work on the site these past two week; I've been fighting with php and working on a few other small projects as detailed on my blog:<a href="http://blogs.pstcc.edu/awshireman/2013/10/21/csit-2230-week-8-database-design/">Week 8</a> <a href="http://blogs.pstcc.edu/awshireman/2013/10/25/csit-2230-week9-jquery/">Week9</a>.</li>
