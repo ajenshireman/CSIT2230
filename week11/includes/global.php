@@ -21,6 +21,7 @@ $db->connect($args);
 $userTools = new UserTools();
 
 // Start the session
+session_name('c2230a16');
 session_start();
 $_SESSION['userTable'] = 'user';
 
