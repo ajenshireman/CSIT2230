@@ -1,7 +1,7 @@
 <?php
 $currentPage = 'changelog';
-
-require_once('./includes/head.php');
+require_once 'includes/global.php';
+require_once 'includes/head.php';
 
 ?>
 <body>
@@ -25,7 +25,6 @@ require_once('./includes/head.php');
 		    <li>'About', 'Changelog', and 'Archive' are all under the same drop-down labbeled 'About'</li>
 		    <li><strong>Issues</strong>
 			<ul>
-			    <li>Users are logged out when navigating to a new page.</li>
 			    <li>Forms do not resest when the drop down closes</li>
 			</ul>
 		    </li>

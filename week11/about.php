@@ -1,7 +1,7 @@
 <?php
 $currentPage = 'about';
-
-require_once('./includes/head.php');
+require_once 'includes/global.php';
+require_once 'includes/head.php';
 ?>
   <body>
     <!-- Wrapper for page content -->
