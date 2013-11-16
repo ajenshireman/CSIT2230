@@ -19,10 +19,10 @@ require_once('./includes/head.php');
 	      <p>
 		<h4>2013-11-17</h4>
 		<ul>
-		    <li>
-			User accounts are now implemented on the main site.<br />
-			There are still a fe wsecurity issues to work out, but if I go down that rabbit hole, I won't get any of the ther work done on the site.
-		    </li>
+		    <li>Work done is no longer tagged by technoogy used. All features are using al of them in some capacity.</li>
+		    <li>User accounts are now implemented on the main site.</li>
+		    <li>Collections link only show up when logged in.</li>
+		    <li>'About', 'Changelog', and 'Archive' are all under the same drop-down labbeled 'About'</li>
 		</ul>
 	      </p>
 	      <p>
