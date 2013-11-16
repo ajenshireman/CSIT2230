@@ -17,12 +17,37 @@ require_once('./includes/head.php');
           <div class="text-left">
               <h3>Changelog</h3>
 	      <p>
+		<h4>2013-11-17</h4>
+		<ul>
+		    <li>
+			User accounts are now implemented on the main site.<br />
+			There are still a fe wsecurity issues to work out, but if I go down that rabbit hole, I won't get any of the ther work done on the site.
+		    </li>
+		</ul>
+	      </p>
+	      <p>
+		<h4>2013-11-11</h4>
+		<ul>
+		    <li><strong>Test Week</strong>
+			<ul>
+			    <li>Reviewed work done on classmates' sites</li>
+			    <li>Posted <a href="http://blogs.pstcc.edu/awshireman/2013/11/12/csit-2230-week-10-part-2/">blog</a> with 'contract' for final exam work</li>
+			</ul>
+		    </li>
+		    <li><strong>Ajax/PHP</strong>
+			<ul>
+			    <li>Basic file upload is working. Test page is <a href="http://ps11.pstcc.edu/~c2230a16/week10">here</a>.</li>
+			</ul>
+		    </li>
+		</ul>
+	      </p>
+	      <p>
 		<h4>2013-10-8</h4>
 		<ul>
 		    <li>Very little work on the site these past two week; I've been fighting with php and working on a few other small projects as detailed on my blog:<a href="http://blogs.pstcc.edu/awshireman/2013/10/21/csit-2230-week-8-database-design/">Week 8</a> <a href="http://blogs.pstcc.edu/awshireman/2013/10/25/csit-2230-week9-jquery/">Week9</a>.</li>
 		    <li><strong>PHP/MySQL/jQuery</strong>
 			<ul>
-			    <li>Got my DB database interaction abstractin class working. Test pge <a href="http://ps11.pstcc.edu/~c2230a16/week8/dbtest.php">here</a>.</li>
+			    <li>Got my DB database interaction abstraction class working. Test page <a href="http://ps11.pstcc.edu/~c2230a16/week8/dbtest.php">here</a>.</li>
 			    <li>Project for testing interaction: A couple of tables for tracking changes to the size of the winsxs folder on various Windows machines: Create new machines and create events that changed the size of winsxs.<a href="http://ps11.pstcc.edu/~c2230a16/winsxs/">link</a></li>
 			    <li>Wrote classes for handing user information, reistration, and login. <a href="http://ps11.pstcc.edu/~c2230a16/userTest/">Test page</a></li>
 			    <li>Week 9 assignment: AJAX database query. <a href="http://ps11.pstcc.edu/~c2230a16/week9/">link</a></li>

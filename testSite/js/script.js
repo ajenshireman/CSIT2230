@@ -1,3 +1,52 @@
+/* User Login */
+$('document').ready(function(){
+    $('#loginForm').submit(function(e){
+        e.preventDefault();
+        login();
+    });
+    
+    $('#registerForm').submit(function(e){
+        e.preventDefault();
+        register();
+    });
+    
+    $('.toggle-form').click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.message.error').html('');
+        $('.form-toggle').find('input').val('');
+        $('.form-toggle').toggle();
+    });
+});
+
+function login () {
+    var username = $('#loginUsername').val();
+    var password = $('#loginPassword').val();
+    $.post('login.php', { username: username, password: password }, function(data) {
+        if ( data ) {
+            $('#loginError').css({'display': 'block'}).html(data);
+        } else {
+            window.location = 'index.php';
+        }
+    });
+}
+
+function register () {
+    var username = $('#registerUsername').val();
+    var password = $('#registerPassword').val();
+    var password_confirm = $('#registerConfirmPassword').val();
+    var email = $('#registerEmail').val();
+    
+    $.post('register.php', { username: username, password: password, password_confirm: password_confirm, email: email }, function(data){
+        if ( data ) {
+            $('#registerError').css({'display': 'block'}).html(data);
+        } else {
+            alert('Success!');
+            window.location = 'index.php';
+        }
+    });
+}
+
 /* for prototype: add links to info demo page to all collection images */
 
 

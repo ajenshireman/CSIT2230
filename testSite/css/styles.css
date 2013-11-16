@@ -297,8 +297,6 @@ body {
     background-color: #0f0f0f;
 }
 
-
-
 #searchBox {
     margin-top: 3px;
     height: 30px;
@@ -310,16 +308,21 @@ body {
     height: 30px;
 }
 
-#loginForm {
+.navbar form {
+    margin: auto;
+    width: 258px;
     padding: 10px;
+    background-color: #3f3f3f;
 }
-#loginForm #loginError {
+
+.navbar form .error {
+    display: none;
     color: #ff0000;
 }
 
-#loginForm input.loginForm-control {
+.navbar form input.loginForm-control {
     display: block;
-    height: 34px;
+    height: 30px;
     padding: 6px 12px;
     margin: 5px 0px;
     font-size: 14px;
@@ -331,16 +334,21 @@ body {
     border-radius: 4px;
 }
 
-#loginForm .btn {
+.navbar form .btn {
     width: 100%;
 }
 
-#loginForm #register {
-    margin-top: 15px;
+.form-toggle .message {
+    margin-top: 7px;
+    margin-bottom: 7px;
     color: #a0a0a0;
 }
 
-#loginForm #register a {
+form-toggle .messsgae a,
+a.toggle-form {
     color: #f0f0f0;
 }
-    
+
+#register-toggle {
+    display: none;
+}

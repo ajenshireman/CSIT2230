@@ -1,7 +1,7 @@
 <?php
 $currentPage = 'main';
 require_once 'includes/global.php';
-require_once('./includes/head.php');
+require_once 'includes/head.php';
 
 ?>
 
@@ -173,7 +173,6 @@ require_once('./includes/head.php');
   
   <!-- Custom JavaScript -->
   <script type="text/javascript" src="js/script.js"></script>
-  
-  <script>setCurrentPage(currentPage)</script>
+
 </body>
 </html>
