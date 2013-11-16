@@ -26,6 +26,13 @@ $('document').ready(function(){
         }
         
     });
+    
+    $('#logout').click(function(e){
+        e.preventDefault();
+        $.post('logout.php', {}, function(data){
+            window.location = 'index.php';
+        });
+    });
 });
 
 function login () {
@@ -50,7 +57,6 @@ function register () {
         if ( data ) {
             $('#registerError').css({'display': 'block'}).html(data);
         } else {
-            alert('Success!');
             window.location = 'index.php';
         }
     });

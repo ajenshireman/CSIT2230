@@ -36,7 +36,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getUsername() ?><b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="logout.php">Log Out</a></li>
+            <li><a href="logout.php" id="logout">Log Out</a></li>
           </ul>
         </li>
         <?php
