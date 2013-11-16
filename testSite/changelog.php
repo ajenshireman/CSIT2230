@@ -20,7 +20,7 @@ require_once('./includes/head.php');
 		<h4>2013-11-17</h4>
 		<ul>
 		    <li>Work done is no longer tagged by technoogy used. All features are using al of them in some capacity.</li>
-		    <li>User accounts are now implemented on the main site.</li>
+		    <li>User accounts are now implemented on the main site. See the <a href="">blog</a> for details.</li>
 		    <li>Collections link only show up when logged in.</li>
 		    <li>'About', 'Changelog', and 'Archive' are all under the same drop-down labbeled 'About'</li>
 		</ul>
