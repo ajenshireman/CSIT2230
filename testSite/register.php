@@ -16,11 +16,12 @@ $email = mysql_real_escape_string($_POST['email']);
 
 // Initialize variables for form validation
 $success = true;
+$error = '';
 
 // Validate that the form was filled out correctly
 // Make sure all fields are filed out
 if ( empty($username) || empty($password) || empty($password_confirm) || empty($email) ) {
-    $error = 'Pease fill out all fields';
+    $error = 'Please fill out all fields';
     $success = false;
 }
 // Check to see if the username already exists
