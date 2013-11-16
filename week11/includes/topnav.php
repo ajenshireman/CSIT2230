@@ -33,12 +33,16 @@
       <ul class="nav navbar-nav navbar-right" id="login-register">
         <?php
         if ( isset($_SESSION['logged_in']) ) {?>
+        <!-- User Menu -->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getUsername() ?><b class="caret"></b></a>
           <ul class="dropdown-menu">
+            <li><a href="#">Manage Account</a></li>
+            <li><a href="#">Manage Collections</a></li>
             <li><a href="logout.php" id="logout">Log Out</a></li>
           </ul>
         </li>
+        <!-- /User Menu -->
         <?php
         } else {?>
         <!-- Log in -->
