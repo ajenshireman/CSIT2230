@@ -52,9 +52,11 @@
                   <input id="loginUsername" name="loginUsername" type="text" class="loginForm-control" size="30"placeholder="Username" />
                   <input id="loginPassword" name="loginPassword" type="password" class="loginForm-control" size="30"placeholder="Password" />
                 </div>
-                <div class="message">
-                  <input type="checkbox" name="rememberMe" value="Remember Me" /> Remember Me
-                  <span class="pull-right"><input type="checkbox" class="pwToggle" name="showLoginPW" value="Show Password" /> Show Password</span>
+                <div class="message pull-left" style="display: none">
+                  <input type="checkbox" name="rememberMe" value=" Remember Me" /> Remember Me
+                </div>
+                <div class="message pull-right">
+                  <input type="checkbox" class="pwToggle" name="showLoginPW" value="Show Password" /> Show Password
                 </div>
                 <button type="submit" class="btn btn-submit btn-login" id="btnLogin" name="btnLogin" value="Log In">Log In</button>
                 <div id="toggle-login" class="message">
