@@ -17,6 +17,15 @@ $('document').ready(function(){
         $('.form-toggle').find('input').val('');
         $('.form-toggle').toggle();
     });
+    
+    $('.pwToggle').click(function(e){
+        if ( this.checked ) {
+            $(this).closest('form').find('input[name*=Password]').attr('type', 'text');
+        } else {
+            $(this).closest('form').find('input[name*=Password]').attr('type', 'password');
+        }
+        
+    });
 });
 
 function login () {

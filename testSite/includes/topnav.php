@@ -47,13 +47,14 @@
           <ul class="dropdown-menu">
             <li id="login-toggle" class="form-toggle">
               <form role="form" id="loginForm" method="post" action="login.php">
-                <div id="loginError" class="messsage error"></div>
+                <div id="loginError" class="message error"></div>
                 <div class="form-group">
                   <input id="loginUsername" name="loginUsername" type="text" class="loginForm-control" size="30"placeholder="Username" />
                   <input id="loginPassword" name="loginPassword" type="password" class="loginForm-control" size="30"placeholder="Password" />
                 </div>
                 <div class="message">
                   <input type="checkbox" name="rememberMe" value="Remember Me" /> Remember Me
+                  <input type="checkbox" class="pwToggle" name="showLoginPW" value="Show Password" /> Show Password
                 </div>
                 <button type="submit" class="btn btn-submit btn-login" id="btnLogin" name="btnLogin" value="Log In">Log In</button>
                 <div id="toggle-login" class="message">
@@ -71,6 +72,9 @@
                   <input id="registerPassword" name="registerPassword" type="password" class="loginForm-control" size="30"placeholder="Password" />
                   <input id="registerConfirmPassword" name="registerConfirmPassword" type="password" class="loginForm-control" size="30"placeholder="ConfirmPassword" />
                   <input id="registerEmail" name="registerEmail" type="text" class="loginForm-control" size="30"placeholder="email" />
+                </div>
+                <div class="message">
+                  <input type="checkbox" class="pwToggle" name="showRegisterPW" value="Show Password" /> Show Password
                 </div>
                 <button type="submit" class="btn btn-submit btn-register" id="btnRegister" name="btnRegister" value="Log In">Register</button>
                 <div id="toggle-register" class="message">
