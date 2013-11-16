@@ -63,12 +63,10 @@ class User {
                 'password' => "'$this->hashedPassword'",
                 'email'    => "'$this->email'"
             );
-            echo $this->email.'<br />';
             $db->update($_SESSION[userTable], $data, "id = '".$this->id."'");
         }
         // else register the user
         else {
-            echo 'Registering the user<br />';
             $data = array (
                 'username' => "'$this->username'",
                 'password' => "'$this->hashedPassword'",
