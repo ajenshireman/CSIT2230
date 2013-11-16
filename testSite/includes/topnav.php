@@ -54,7 +54,7 @@
                 </div>
                 <div class="message">
                   <input type="checkbox" name="rememberMe" value="Remember Me" /> Remember Me
-                  <input type="checkbox" class="pwToggle" name="showLoginPW" value="Show Password" /> Show Password
+                  <span class="pull-right"><input type="checkbox" class="pwToggle" name="showLoginPW" value="Show Password" /> Show Password</span>
                 </div>
                 <button type="submit" class="btn btn-submit btn-login" id="btnLogin" name="btnLogin" value="Log In">Log In</button>
                 <div id="toggle-login" class="message">
@@ -73,7 +73,7 @@
                   <input id="registerConfirmPassword" name="registerConfirmPassword" type="password" class="loginForm-control" size="30"placeholder="ConfirmPassword" />
                   <input id="registerEmail" name="registerEmail" type="text" class="loginForm-control" size="30"placeholder="email" />
                 </div>
-                <div class="message">
+                <div class="message pull-right">
                   <input type="checkbox" class="pwToggle" name="showRegisterPW" value="Show Password" /> Show Password
                 </div>
                 <button type="submit" class="btn btn-submit btn-register" id="btnRegister" name="btnRegister" value="Log In">Register</button>
