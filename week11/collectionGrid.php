@@ -1,8 +1,6 @@
 <?php
 $currentPage = 'collection';
-require_once 'includes/global.php';
 require_once 'includes/head.php';;
-
 ?>
 <body>
   <div id="wrap">
