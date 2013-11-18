@@ -18,7 +18,7 @@ require_once 'includes/head.php';
 		<h4><a href="archive/20131117">2013-11-17</a></h4>
 		<ul>
 		    <li>Work done is no longer tagged by technoogy used. All features are using al of them in some capacity.</li>
-		    <li>User accounts are now implemented on the main site. See the <a href="">blog</a> for details.</li>
+		    <li>User accounts are now implemented on the main site. See the <a href="http://blogs.pstcc.edu/awshireman/2013/11/16/csit-2230-week-11/">blog</a> for details.</li>
 		    <li>Collections link only shows up when logged in.</li>
 		    <li>'About', 'Changelog', and 'Archive' are all under the same drop-down labeled 'About'</li>
 		    <li><strong>Issues</strong>
