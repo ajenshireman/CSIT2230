@@ -45,9 +45,9 @@ require_once 'includes/head.php';
 		</ul>
 	      </p>
 	      <p>
-		<h4>2013-10-8</h4>
+		<h4>2013-10-28</h4>
 		<ul>
-		    <li>Very little work on the site these past two week; I've been fighting with php and working on a few other small projects as detailed on my blog:<a href="http://blogs.pstcc.edu/awshireman/2013/10/21/csit-2230-week-8-database-design/">Week 8</a> <a href="http://blogs.pstcc.edu/awshireman/2013/10/25/csit-2230-week9-jquery/">Week9</a>.</li>
+		    <li>Very little work on the site these past two weeks; I've been fighting with php and working on a few other small projects as detailed on my blog:<a href="http://blogs.pstcc.edu/awshireman/2013/10/21/csit-2230-week-8-database-design/">Week 8</a> <a href="http://blogs.pstcc.edu/awshireman/2013/10/25/csit-2230-week9-jquery/">Week9</a>.</li>
 		    <li><strong>PHP/MySQL/jQuery</strong>
 			<ul>
 			    <li>Got my DB database interaction abstraction class working. Test page <a href="http://ps11.pstcc.edu/~c2230a16/week8/dbtest.php">here</a>.</li>
