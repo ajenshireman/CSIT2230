@@ -33,6 +33,7 @@ class UserTools {
                 $_SESSION['user'] = serialize($user);
                 $_SESSION['login_time'] = time();
                 $_SESSION['logged_in']  = 1;
+                session_regenerate_id();
                 return true;
             } else {
                 // Wirong password
