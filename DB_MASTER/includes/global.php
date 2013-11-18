@@ -21,8 +21,9 @@ $db->connect($args);
 $userTools = new UserTools();
 
 // Start the session
+session_name('c2230a16');
 session_start();
-$_SESSION['userTable'] = 'userTest';
+$_SESSION['userTable'] = 'user';
 
 // Refresh the session varibles if the user is logged in
 if ( isset($_SESSION['logged_in']) ) {
