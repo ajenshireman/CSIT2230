@@ -56,6 +56,12 @@ The table it looks at contains the members of the Flying Circus.
 Work for week 10.
 Basic scripts for handling file uploads.
 
+/week11
+-------
+
+Work for week 11.
+Added user registration and login to the main site.
+
 /winsxs
 -------
 
