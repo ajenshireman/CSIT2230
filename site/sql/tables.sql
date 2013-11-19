@@ -12,16 +12,17 @@ CREATE TABLE `user` (
 ENGINE=InnoDB;
 
 CREATE TABLE `collection` (
-  `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` BIGINT(20) UNSIGNED NOT NULL  AUTO_INCREMENT,
   `user_id` BIGINT(20) UNSIGNED NOT NULL,
   `name` VARCHAR(255) NOT NULL,
   `createdOn` DATETIME NOT NULL,
+  `isMain` TINYINT(1) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `name` (`name` ASC),
   INDEX `user_id` (`user_id` ASC),
   CONSTRAINT `fk_collection_user_id`
     FOREIGN KEY (`user_id`)
-    REFERENCES `user` (`id`)
+    REFERENCES `collectionManager`.`user` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 )
@@ -75,7 +76,7 @@ CREATE TABLE `collection_item` (
 ENGINE = InnoDB;
 
 CREATE TABLE `movie` (
-  `item_id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `item_id` BIGINT(20) UNSIGNED NOT NULL,
   `title` VARCHAR(255) NULL,
   `year` CHAR(4) NULL,
   `genre` VARCHAR(255) NULL,
