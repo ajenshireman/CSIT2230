@@ -1,0 +1,59 @@
+onRegister:
+    get new user id
+    insert (collection)
+        user_id
+        name = 'Main Collection'
+        isMain = 1;
+
+itemType:
+    form:
+        name
+        description
+    /* */
+    get form data
+    insert (itemType)
+        typeName
+        description
+    
+collection:
+    form:
+        name
+    /* */
+    get form data
+    get user id from session
+    insert (collection)
+        user_id
+        name
+        isMain = 0
+    
+add item (movie):
+    get user id from session
+    query for collection id's
+    query for itemTypes
+    form:
+        collection (dropdown default-main)
+        itemType
+        title
+        description
+        year
+        image (file select)
+        movie (file select)
+    /* */
+    get info for files
+    imagePath = item/itemImage
+    insert (item)
+        itemType
+        image info
+    get item id
+    moviePath = item/video
+    insert (movie)
+        item_id
+        title
+        year
+        description
+        movie info
+    insert (collection_item)
+        collection_id
+        item_id
+        
+        
