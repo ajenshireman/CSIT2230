@@ -34,11 +34,11 @@
         <?php
         if ( isset($_SESSION['logged_in']) ) {?>
         <!-- User Menu -->
-        <li class="dropdown">
+        <li class="dropdown<?php if ( $currentPage == 'settings' || $currentPage == 'manage' ) { ?> active<?php }?>">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getUsername() ?><b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Manage Account</a></li>
-            <li><a href="#">Manage Collections</a></li>
+            <li><a href="userSettings.php">Manage Account</a></li>
+            <li<?php if ( $currentPage == 'settings' ) { ?> class="active"<?php }?>><a href="#">Manage Collections</a></li>
             <li><a href="logout.php" id="logout">Log Out</a></li>
           </ul>
         </li>
