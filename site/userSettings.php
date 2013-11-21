@@ -29,7 +29,7 @@ require_once 'includes/head.php';
                     </div>
                     <div id="changeEmail" class="form-swap" hidden>
                         <form role="form" id="emailForm" method="post" action="changeEmail.php">
-                            <div id="emailError" class="message error"></div>
+                            <div id="emailError" class="message error alert"></div>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="newEmail" placeholder="New e-mail" />
                             </div>
@@ -44,7 +44,7 @@ require_once 'includes/head.php';
                     </div>
                     <div id="changePassword" class="form-swap" hidden>
                         <form role="form" id="passwordForm" method="post" action="changePassword.php">
-                            <div id="passwordError" class="message error"></div>
+                            <div id="passwordError" class="message error alert"></div>
                             <div class="form-group">
                                 <input type="text" class="form-control"  name="currentPassword" placeholder="Current Password" />
                             </div>
