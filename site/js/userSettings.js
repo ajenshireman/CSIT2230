@@ -12,6 +12,7 @@ $(function(){
     $('.swap').click(function(e){
         e.preventDefault();
         $('.form-swap').hide().find('input').val('');
+        $('.form-swap').find('.alert').hide().html('');
         var target = '#' + $(this).attr('data-target');
         $(target).show();
     });
@@ -28,7 +29,7 @@ $(function(){
         var emailPassword = $('input[name="emailPassword"]').val();
         $.post('changeEmail.php', { email: newEmail, password: emailPassword }, function(data){
             if ( data ) {
-                $('#emailError').html(data);
+                $('#emailError').html(data).addClass('alert-warning').show();
                 //updateUser();
             } else {
                 alert ('There has been an error');
