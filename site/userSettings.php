@@ -24,8 +24,8 @@ require_once 'includes/head.php';
                 </nav>
                 <div class="col-xs-12 col-sm-9">
                     <div id="details" class="form-swap">
-                        <p>username: <?php echo $user->getUsername(); ?></p>
-                        <p>email: <?php echo $user->getEmail(); ?></p>
+                        <p>username: <span class="currentUsername"><?php echo $user->getUsername() ?></span></p>
+                        <p>email: <span class="currentEmail"><?php echo $user->getEmail() ?></span></p>
                     </div>
                     <div id="changeEmail" class="form-swap" hidden>
                         <form role="form" id="emailForm" method="post" action="changeEmail.php">
