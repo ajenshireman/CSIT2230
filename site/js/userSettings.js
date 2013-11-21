@@ -20,6 +20,7 @@ $(function(){
     $('.btn-cancel').click(function(e){
        e.preventDefault();
        $(this).closest('form').find('input').val('');
+       $('.form-swap').find('.alert').hide().html('');
     });
     
     /* Change e-mail */
@@ -41,5 +42,14 @@ $(function(){
     /* Change Password */
     $('#passwordForm').submit(function(e){
         e.preventDefault();
+        //var currentPassword = $('input[name="currentPassword"]').val;
+        var currentPassword = $('input[name="currentPassword"]').val();
+        var newPassword = $('input[name="newPassword"]').val();
+        var confirmPassword = $('input[name="confirmPassword"]').val();
+        $.post('changePassword.php', { currentPassword: currentPassword, newPassword: newPassword, confirmPassword: confirmPassword }, function(data){
+            if ( data ) {
+                $('#passwordError').html(data).addClass('alert-warning').show();
+            }
+        });
     });
 });
