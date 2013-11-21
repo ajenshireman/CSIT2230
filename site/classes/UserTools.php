@@ -76,6 +76,24 @@ class UserTools {
         }
     }
     
+    // Verify the user's password
+    public function verifyUser ( $user, $password ) {
+        $userID = $user->getUserID;
+        $queryArgs = array(
+            'select' => 'password',
+            'from'   => "'{$_SESSION['userTabe']}'",
+            'where'  => "id = $userID"
+        );
+        $db = new DB();
+        $result = $db->select($queryArgs);
+        $userPassword = $result[0]['password'];
+        if ( password_verify($password, $userPassword) ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     // Get a user
     // Returns a User object. Takes the user id
     public function get ( $userID ) {
