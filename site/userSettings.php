@@ -34,7 +34,7 @@ require_once 'includes/head.php';
                                 <input type="text" class="form-control" name="newEmail" placeholder="New e-mail" />
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control name="emailPassword" placeholder="Password" />
+                                <input type="text" class="form-control" name="emailPassword" placeholder="Password" />
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-submit btn-inline" name="btnChangeEmail" value="Change">Change</button>
