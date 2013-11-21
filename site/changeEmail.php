@@ -19,7 +19,7 @@ if ( $userTools->verifyUser ($user, $enteredPassword) ) {
     $user->setEmail($email);
     $user->save();
     $userTools->refreshUser($user);
-    echo 'Your Password has been changed';
+    echo 'Your e-mail has been changed';
     return;
 } else {
     echo 'Incorrect password';
