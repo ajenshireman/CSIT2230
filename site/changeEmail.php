@@ -16,7 +16,6 @@ if ( empty($email) ) {
 
 // Get the user's pw from the db and compare to the entered password
 if ( $userTools->verifyUser ($user, $enteredPassword) ) {
-    //echo 'Password Correct';
     $user->setEmail($email);
     $user->save();
     $userTools->refreshUser($user);
