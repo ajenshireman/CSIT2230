@@ -81,7 +81,7 @@ class UserTools {
         $userID = $user->getUserID;
         $queryArgs = array(
             'select' => 'password',
-            'from'   => "'{$_SESSION['userTabe']}'",
+            'from'   => "'{$_SESSION['userTable']}'",
             'where'  => "id = $userID"
         );
         $db = new DB();
