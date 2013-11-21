@@ -78,10 +78,10 @@ class UserTools {
     
     // Verify the user's password
     public function verifyUser ( $user, $password ) {
-        $userID = $user->getUserID;
+        $userID = $user->getUserID();
         $queryArgs = array(
             'select' => 'password',
-            'from'   => "'{$_SESSION['userTable']}'",
+            'from'   => $_SESSION['userTable'],
             'where'  => "id = $userID"
         );
         $db = new DB();
