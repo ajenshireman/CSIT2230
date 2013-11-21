@@ -1,4 +1,13 @@
 $(function(){
+    updateUser();
+    
+    /* Update the user information */
+    function updateUser () {
+        var user = '<?php echo json_encode($user) ?>';
+        $('.currentUsername').html(user.username);
+        $('.currentEmail').html(user.email);
+    }
+    
     /* Navigation */
     $('.swap').click(function(e){
         e.preventDefault();
@@ -20,6 +29,7 @@ $(function(){
         $.post('changeEmail.php', { email: newEmail, password: emailPassword }, function(data){
             if ( data ) {
                 $('#emailError').html(data);
+                //updateUser();
             } else {
                 alert ('There has been an error');
             }
