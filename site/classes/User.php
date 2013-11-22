@@ -71,7 +71,6 @@ class User {
                 'username' => "'$this->username'",
                 'password' => "'$this->hashedPassword'",
                 'email'    => "'$this->email'",
-                'joindate' => "'".date("Y-m-d H:i:s")."'"
             );
             
             $this->id = $db->insert($_SESSION['userTable'], $data);
