@@ -38,6 +38,10 @@ require_once 'includes/head.php';
                                 <input type="text" class="form-control" name="emailPassword" placeholder="Password" />
                             </div>
                             <div class="form-group">
+                                <input type="checkbox" class="pwToggle" />
+                                <span>Show Password</span>
+                            </div>
+                            <div class="form-group">
                                 <button class="btn btn-submit btn-inline" name="btnChangeEmail" value="Change">Change</button>
                                 <button class="btn btn-cancel btn-inline" name="btnCancelEmail" value="Cancel">Cancel</button>
                             </div>
@@ -54,6 +58,10 @@ require_once 'includes/head.php';
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="confirmPassword" placeholder="Confirm Password" />
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" class="pwToggle" />
+                                <span>Show Password</span>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-submit btn-inline" name="btnChangeEmail" value="Change">Change</button>
