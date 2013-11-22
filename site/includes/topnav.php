@@ -29,7 +29,6 @@
           </ul>
         </li>
       </ul>
-      <!-- Forms for user log in and registration, on right side -->
       <ul class="nav navbar-nav navbar-right" id="login-register">
         <?php
         if ( isset($_SESSION['logged_in']) ) {?>
@@ -45,6 +44,7 @@
         <!-- /User Menu -->
         <?php
         } else {?>
+        <!-- Forms for user log in and registration, on right side -->
         <!-- Log in -->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log in / Register<b class="caret"></b></a>
