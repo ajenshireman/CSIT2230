@@ -31,14 +31,13 @@ $(function(){
         $.post('changeEmail.php', { email: newEmail, password: emailPassword }, function(data){
             if ( data ) {
                 var result = $.parseJSON(data);
-                var errorLoc = $('#emailError');
                 var errorClass = '';
                 if ( result.success == 'true') {
                     errorClass = 'alert-success';
                 } else {
                     errorClass = 'alert-warning';
                 }
-                errorLoc.html(result.message).removeClass('alert-warning alert-success').addClass(errorClass).show();
+                $('#emailError').html(result.message).removeClass('alert-warning alert-success').addClass(errorClass).show();
                 //updateUser();
             } else {
                 alert ('There has been an error');
@@ -50,13 +49,19 @@ $(function(){
     /* Change Password */
     $('#passwordForm').submit(function(e){
         e.preventDefault();
-        //var currentPassword = $('input[name="currentPassword"]').val;
         var currentPassword = $('input[name="currentPassword"]').val();
         var newPassword = $('input[name="newPassword"]').val();
         var confirmPassword = $('input[name="confirmPassword"]').val();
         $.post('changePassword.php', { currentPassword: currentPassword, newPassword: newPassword, confirmPassword: confirmPassword }, function(data){
             if ( data ) {
-                $('#passwordError').html(data).addClass('alert-warning').show();
+                var result = $.parseJSON(data);
+                var errorClass = '';
+                if ( result.success == 'true') {
+                    errorClass = 'alert-success';
+                } else {
+                    errorClass = 'alert-warning';
+                }
+                $('#passwordError').html(result.message).removeClass('alert-warning alert-success').addClass(errorClass).show();
             }
         });
     });

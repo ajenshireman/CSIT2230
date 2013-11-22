@@ -1,20 +1,23 @@
 <?php
 require_once 'includes/global.php';
 
-$error = '';
+$result = array(
+    'success' => 'false',
+    'message' => ''
+);
 $currentPassword = mysql_real_escape_string($_POST['currentPassword']);
 $newPassword = mysql_real_escape_string($_POST['newPassword']);
 $confirmPassword = mysql_real_escape_string($_POST['confirmPassword']);
 
-//echo $confirmPassword;
-//return;
-
 // Make sure the fields have been filled out
 if ( empty($currentPassword) ) {
-    echo 'Please enter your password.';
+    $result['success'] = 'false';
+    $result['message'] = 'Please enter your password.';
+    echo json_encode($result);
     return;
 } else if ( empty($newPassword) ) {
-    echo 'Please enter a new password.';
+    $result['success'] = 'false';
+    $result['message'] = 'Please enter a new password.';
     return;
 }
 
@@ -24,14 +27,20 @@ if ( $userTools->verifyUser ($user, $currentPassword) ) {
         $user->setPassword(password_hash($newPassword, PASSWORD_BCRYPT));
         $user->save();
         $userTools->refreshUser($user);
-        echo 'Your Password has been changed';
+        $result['success'] = 'true';
+        $result['message'] = 'Your Password has been changed';
+        echo json_encode($result);
         return;
     } else {
-        echo 'Passwords do not match.';
+        $result['success'] = 'false';
+        $result['message'] = 'Passwords do not match.';
+        echo json_encode($result);
         return;
     }
 } else {
-    echo 'Incorrect password';
+    $result['success'] = 'false';
+    $result['message'] = 'Incorrect password';
+    echo json_encode($result);
     return;
 }
 ?>
