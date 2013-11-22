@@ -4,6 +4,7 @@ require_once 'lib/password.php';
 require_once 'classes/DB.php';
 require_once 'classes/User.php';
 require_once 'classes/UserTools.php';
+require_once 'classes/SiteTools.php';
 
 // Setup $args for database connection
 $args = array(
