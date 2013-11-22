@@ -1,16 +1,23 @@
 <?php
 require_once 'includes/global.php';
 
-$error = '';
 $email = mysql_real_escape_string($_POST['email']);
 $enteredPassword = mysql_real_escape_string($_POST['password']);
+$result = array(
+    'success' => 'false',
+    'message' => ''
+);
 
 // Make sure the fields have been filled out
 if ( empty($email) ) {
-    echo 'Please enter a valid e-mail address.';
+    $result['success'] = 'false';
+    $result['message'] = 'Please enter a valid e-mail address.';
+    echo json_encode($result);
     return;
 } else if ( empty($enteredPassword) ) {
-    echo 'Please enter your password.';
+    $result['success'] = 'false';
+    $result['message'] = 'Please enter your password.';
+    echo json_encode($result);
     return;
 }
 
@@ -19,10 +26,14 @@ if ( $userTools->verifyUser ($user, $enteredPassword) ) {
     $user->setEmail($email);
     $user->save();
     $userTools->refreshUser($user);
-    echo 'Your e-mail has been changed';
+    $result['success'] = 'true';
+    $result['message'] = 'Your e-mail has been changed';
+    echo json_encode($result);
     return;
 } else {
-    echo 'Incorrect password';
+    $result['success'] = 'false';
+    $result['message'] = 'Incorrect password';
+    echo json_encode($result);
     return;
 }
 ?>

@@ -30,7 +30,15 @@ $(function(){
         var emailPassword = $('input[name="emailPassword"]').val();
         $.post('changeEmail.php', { email: newEmail, password: emailPassword }, function(data){
             if ( data ) {
-                $('#emailError').html(data).addClass('alert-warning').show();
+                var result = $.parseJSON(data);
+                var errorLoc = $('#emailError');
+                var errorClass = '';
+                if ( result.success == 'true') {
+                    errorClass = 'alert-success';
+                } else {
+                    errorClass = 'alert-warning';
+                }
+                errorLoc.html(result.message).removeClass('alert-warning alert-success').addClass(errorClass).show();
                 //updateUser();
             } else {
                 alert ('There has been an error');
