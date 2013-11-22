@@ -3,7 +3,7 @@ CREATE TABLE `user` (
     `username` VARCHAR(255) NOT NULL,
     `password` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
-    `joindate` DATETIME NOT NULL,
+    `joindate` TIMESTAMP NOT NULL DEFAULT current_timestamp,
     PRIMARY KEY (`id`),
     UNIQUE INDEX `id` (`id`),
     UNIQUE INDEX `username` (`username`),
@@ -12,17 +12,17 @@ CREATE TABLE `user` (
 ENGINE=InnoDB;
 
 CREATE TABLE `collection` (
-  `id` BIGINT(20) UNSIGNED NOT NULL  AUTO_INCREMENT,
+  `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` BIGINT(20) UNSIGNED NOT NULL,
   `name` VARCHAR(255) NOT NULL,
-  `createdOn` DATETIME NOT NULL,
-  `isMain` TINYINT(1) NOT NULL,
+  `createdOn` TIMESTAMP NOT NULL DEFAULT current_timestamp,
+  `isMain` TINYINT(1) NOT NULL DEFAULT false,
   PRIMARY KEY (`id`),
   INDEX `name` (`name` ASC),
   INDEX `user_id` (`user_id` ASC),
   CONSTRAINT `fk_collection_user_id`
     FOREIGN KEY (`user_id`)
-    REFERENCES `collectionManager`.`user` (`id`)
+    REFERENCES `user` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 )
@@ -44,7 +44,7 @@ CREATE TABLE `item` (
   `imageName` VARCHAR(255) NOT NULL,
   `imageType` VARCHAR(255) NOT NULL,
   `imageSize` BIGINT(20) NOT NULL,
-  `addedOn` DATETIME NOT NULL,
+  `addedOn` TIMESTAMP NOT NULL DEFAULT current_timestamp,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `imageLocation` (`imagePath` ASC, `imageName` ASC),
   INDEX `imagePath` (`imagePath` ASC),
