@@ -26,6 +26,7 @@ require_once 'includes/head.php';
                     <div id="details" class="form-swap">
                         <p>username: <span class="currentUsername"><?php echo $user->getUsername() ?></span></p>
                         <p>email: <span class="currentEmail"><?php echo $user->getEmail() ?></span></p>
+                        <p>Joined: <span class="joinDate"><?php echo $user->getJoindate() ?></span></p>
                     </div>
                     <div id="changeEmail" class="form-swap" hidden>
                         <form role="form" id="emailForm" method="post" action="changeEmail.php">
