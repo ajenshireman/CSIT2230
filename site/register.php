@@ -51,6 +51,11 @@ if ( $success ) {
     
     // Log them in
     $userTools->login($username, $password);
+    
+    // Create a new collection for the User
+    $user = unserialize($_SESSION['user']);
+    SiteTools::createCollection($user, array('isMain' => true));
+    
 }
 
 echo $error;
