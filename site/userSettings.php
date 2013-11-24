@@ -24,12 +24,24 @@ require_once 'includes/head.php';
                 </nav>
                 <div class="col-xs-12 col-sm-9">
                     <div id="details" class="form-swap">
-                        <p>username: <span class="currentUsername"><?php echo $user->getUsername() ?></span></p>
-                        <p>email: <span class="currentEmail"><?php echo $user->getEmail() ?></span></p>
-                        <p>Joined: <span class="joinDate"><?php echo $user->getJoindate() ?></span></p>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Account Details</h4>
+                            </div>
+                            <div class="panel-body">
+                                <p>username: <span class="currentUsername"><?php echo $user->getUsername() ?></span></p>
+                                <p>email: <span class="currentEmail"><?php echo $user->getEmail() ?></span></p>
+                                <p>Joined: <span class="joinDate"><?php echo $user->getJoindate() ?></span></p>
+                            </div>
+                        </div>
                     </div>
                     <div id="changeEmail" class="form-swap" hidden>
-                        <form role="form" id="emailForm" method="post" action="changeEmail.php">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Change e-mail</h4>
+                            </div>
+                            <div class="panel-body">
+                                <form role="form" id="emailForm" method="post" action="changeEmail.php">
                             <div id="emailError" class="message error alert"></div>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="newEmail" placeholder="New e-mail" />
@@ -46,9 +58,16 @@ require_once 'includes/head.php';
                                 <button class="btn btn-cancel btn-inline" name="btnCancelEmail" value="Cancel">Cancel</button>
                             </div>
                         </form>
+                            </div>
+                        </div>
                     </div>
                     <div id="changePassword" class="form-swap" hidden>
-                        <form role="form" id="passwordForm" method="post" action="changePassword.php">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Change Password</h4>
+                            </div>
+                            <div class="panel-body">
+                                <form role="form" id="passwordForm" method="post" action="changePassword.php">
                             <div id="passwordError" class="message error alert"></div>
                             <div class="form-group">
                                 <input type="text" class="form-control"  name="currentPassword" placeholder="Current Password" />
@@ -68,6 +87,8 @@ require_once 'includes/head.php';
                                 <button class="btn btn-cancel btn-inline" name="btnCancelPassword" value="Cancel">Cancel</button>
                             </div>
                         </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
