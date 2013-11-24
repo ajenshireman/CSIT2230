@@ -13,8 +13,7 @@ $('document').ready(function(){
     $('.toggle-form').click(function(e){
         e.preventDefault();
         e.stopPropagation();
-        $('.message.error').html('');
-        $('.form-toggle').find('input').val('');
+        resetForms();
         $('.form-toggle').toggle();
     });
     
@@ -60,6 +59,12 @@ function register () {
             window.location = 'index.php';
         }
     });
+}
+
+// Clears the login and registration forms
+function resetForms () {
+    $('.message.error').html('');
+    $('.form-toggle').find('input').val('');
 }
 
 /* for prototype: add links to info demo page to all collection images */
