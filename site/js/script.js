@@ -13,8 +13,13 @@ $('document').ready(function(){
     $('.toggle-form').click(function(e){
         e.preventDefault();
         e.stopPropagation();
+        console.log('toggle forms');
         resetForms();
         $('.form-toggle').toggle();
+    });
+    
+    $(document).click(function(){
+        resetForms();
     });
     
     $('.pwToggle').click(function(e){
