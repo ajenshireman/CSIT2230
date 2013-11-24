@@ -1,5 +1,5 @@
 /* User Login */
-$('document').ready(function(){
+$(function(){
     $('#loginForm').submit(function(e){
         e.preventDefault();
         login();
@@ -10,6 +10,7 @@ $('document').ready(function(){
         register();
     });
     
+    // Link for toggling login and registration forms
     $('.toggle-form').click(function(e){
         e.preventDefault();
         e.stopPropagation();
@@ -18,10 +19,12 @@ $('document').ready(function(){
         $('.form-toggle').toggle();
     });
     
+    // Clears the forms when the user clicks outside them. i.e when the form closes
     $(document).click(function(){
         resetForms();
     });
     
+    // Toggle display of passwords
     $('.pwToggle').click(function(e){
         if ( this.checked ) {
             $(this).closest('form').find('input[name*=Password]').attr('type', 'text');
@@ -39,6 +42,7 @@ $('document').ready(function(){
     });
 });
 
+// Log the user in
 function login () {
     var username = $('#loginUsername').val();
     var password = $('#loginPassword').val();
@@ -51,6 +55,7 @@ function login () {
     });
 }
 
+// Register a new user
 function register () {
     var username = $('#registerUsername').val();
     var password = $('#registerPassword').val();
@@ -66,15 +71,13 @@ function register () {
     });
 }
 
-// Clears the login and registration forms
+// Clear the login and registration forms
 function resetForms () {
     $('.message.error').html('');
     $('.form-toggle').find('input').val('');
 }
 
 /* for prototype: add links to info demo page to all collection images */
-
-
 $('document').ready(function(){
     setNavigation();
     initRating();
