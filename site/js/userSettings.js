@@ -94,7 +94,7 @@ $(function(){
                 var errorClass = '';
                 if ( result.success == 'true') {
                     errorClass = 'alert-success';
-                    //window.location = logout.php;
+                    window.location = 'index.php';
                 } else {
                     errorClass = 'alert-warning';
                 }
