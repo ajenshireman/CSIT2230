@@ -15,7 +15,7 @@ require_once 'includes/head.php';
           <div class="text-left">
               <h3>Changelog</h3>
               <p>
-                <h4><a href="archive/2013/11/24">2013-11-24</a></h4>
+                <h4><a href="archive/20131124">2013-11-24</a></h4>
                 <ul>
                     <li><strong>Fix:</strong> When the login and registration form close due to a click outside the form, the reset. The forms do not reset if closed via the nave link. I'm not sure if this is desirable behavior or not, so I'm leaving it in for now.</li>
                     <li>Built a basic user settings page. Users can veiw their username, email, and joindate; change their email and password; and delete their account.</li>
