@@ -12,15 +12,33 @@ $(function(){
     $('.swap').click(function(e){
         e.preventDefault();
         $('.form-swap').hide().find('input').val('');
-        $('.form-swap').find('.alert').hide().html('');
+        $('.form-swap').find('.error').hide().html('');
         var target = '#' + $(this).attr('data-target');
+        if ( target == '#deleteAccount') {
+            $('#deleteAccountForm').hide();
+            $('#confirmDeleteAccount').show();
+        }
         $(target).show();
     });
     
     $('.btn-cancel').click(function(e){
-       e.preventDefault();
-       $(this).closest('form').find('input').val('');
-       $('.form-swap').find('.alert').hide().html('');
+        e.preventDefault();
+        $(this).closest('form').find('input').val('');
+        $('.form-swap').find('.error').hide().html('');
+        if ( $(this).attr('name') == 'btnCancelDelete') {
+            $('#deleteAccountForm').hide();
+            $('#confirmDeleteAccount').show();
+        }
+    });
+    
+    $('#btnConfirmDeleteAccount').click(function(){
+        $('#deleteAccountForm').show();
+        $('#confirmDeleteAccount').hide();
+    });
+    
+    $('#btnCancelDeleteAccount').click(function(){
+        $('.form-swap').hide();
+        $('#details').show();
     });
     
     /* Change e-mail */
@@ -62,6 +80,25 @@ $(function(){
                     errorClass = 'alert-warning';
                 }
                 $('#passwordError').html(result.message).removeClass('alert-warning alert-success').addClass(errorClass).show();
+            }
+        });
+    });
+    
+    /* Delete Account */
+    $('#deleteAccount').submit(function(e){
+        e.preventDefault();
+        var deletePassword = $('input[name="deletePassword"]').val();
+        $.post('deleteAccount.php', { password: deletePassword }, function(data){
+            if ( data ) {
+                var result = $.parseJSON(data);
+                var errorClass = '';
+                if ( result.success == 'true') {
+                    errorClass = 'alert-success';
+                    //window.location = logout.php;
+                } else {
+                    errorClass = 'alert-warning';
+                }
+                $('#deleteAccountError').html(result.message).removeClass('alert-warning alert-success').addClass(errorClass).show();
             }
         });
     });
