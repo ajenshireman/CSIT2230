@@ -43,22 +43,22 @@ require_once 'includes/head.php';
                             </div>
                             <div class="panel-body">
                                 <form role="form" id="emailForm" method="post" action="changeEmail.php">
-                            <div id="emailError" class="message error alert"></div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="newEmail" placeholder="New e-mail" />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" name="emailPassword" placeholder="Password" />
-                            </div>
-                            <div class="form-group">
-                                <input type="checkbox" class="pwToggle" />
-                                <span>Show Password</span>
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-submit btn-inline" name="btnChangeEmail" value="Change">Change</button>
-                                <button class="btn btn-cancel btn-inline" name="btnCancelEmail" value="Cancel">Cancel</button>
-                            </div>
-                        </form>
+                                    <div id="emailError" class="message error alert"></div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="newEmail" placeholder="New e-mail" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="emailPassword" placeholder="Password" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" class="pwToggle" />
+                                        <span>Show Password</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-submit btn-inline" name="btnChangeEmail" value="Change">Change</button>
+                                        <button class="btn btn-cancel btn-inline" name="btnCancelEmail" value="Cancel">Cancel</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -69,25 +69,25 @@ require_once 'includes/head.php';
                             </div>
                             <div class="panel-body">
                                 <form role="form" id="passwordForm" method="post" action="changePassword.php">
-                            <div id="passwordError" class="message error alert"></div>
-                            <div class="form-group">
-                                <input type="text" class="form-control"  name="currentPassword" placeholder="Current Password" />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" name="newPassword" placeholder="New Password" />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" />
-                            </div>
-                            <div class="form-group">
-                                <input type="checkbox" class="pwToggle" />
-                                <span>Show Password</span>
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-submit btn-inline" name="btnChangeEmail" value="Change">Change</button>
-                                <button class="btn btn-cancel btn-inline" name="btnCancelPassword" value="Cancel">Cancel</button>
-                            </div>
-                        </form>
+                                    <div id="passwordError" class="message error alert"></div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"  name="currentPassword" placeholder="Current Password" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="newPassword" placeholder="New Password" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" class="pwToggle" />
+                                        <span>Show Password</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-submit btn-inline" name="btnChangeEmail" value="Change">Change</button>
+                                        <button class="btn btn-cancel btn-inline" name="btnCancelPassword" value="Cancel">Cancel</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
