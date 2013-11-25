@@ -18,11 +18,11 @@ if ( empty($enteredPassword) ) {
 // Get the user's pw from the db and compare to the entered password
 if ( $userTools->verifyUser ($user, $enteredPassword) ) {
     $userID = $user->getUserID();
-    //$query = "delete from user where id = '$userID' limit 1";
     if ( $db->query("delete from user where id = '$userID' limit 1") ) {
         $result['success'] = 'true';
         $result['message'] = 'Your account has been deleted.';
         echo json_encode($result);
+        $userTools->logout();
         return;
     } else {
         $result['success'] = 'false';
