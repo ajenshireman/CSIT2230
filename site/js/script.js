@@ -73,7 +73,7 @@ function register () {
 
 // Clear the login and registration forms
 function resetForms () {
-    $('.message.error').html('');
+    $('.form-toggle .message.error').html('');
     $('.form-toggle').find('input').val('');
 }
 
