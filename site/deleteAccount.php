@@ -21,11 +21,11 @@ if ( $userTools->verifyUser ($user, $enteredPassword) ) {
     //$query = "delete from user where id = '$userID' limit 1";
     if ( $db->query("delete from user where id = '$userID' limit 1") ) {
         $result['success'] = 'true';
-        $result['message'] = 'Your account has been deleted.'.$mysql_error();
+        $result['message'] = 'Your account has been deleted.';
         echo json_encode($result);
         return;
     } else {
-        result['success'] = 'false';
+        $result['success'] = 'false';
         $result['message'] = 'There was an error deleting your account.';
         echo json_encode($result);
         return;
