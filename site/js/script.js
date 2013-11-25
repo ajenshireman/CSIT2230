@@ -37,7 +37,7 @@ $(function(){
     $('#logout').click(function(e){
         e.preventDefault();
         $.post('logout.php', {}, function(data){
-            window.location = 'index.php';
+            window.location.replace('index.php');
         });
     });
 });
@@ -50,7 +50,7 @@ function login () {
         if ( data ) {
             $('#loginError').css({'display': 'block'}).html(data);
         } else {
-            window.location = 'index.php';
+            window.location.replace('index.php');
         }
     });
 }
@@ -66,7 +66,7 @@ function register () {
         if ( data ) {
             $('#registerError').css({'display': 'block'}).html(data);
         } else {
-            window.location = 'index.php';
+            window.location.replace('index.php');
         }
     });
 }
