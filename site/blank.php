@@ -1,8 +1,8 @@
 <?php
 $currentPage = '';
 require_once 'includes/global.php';
-require_once 'includes/head.php';
 
+require_once 'includes/global.php';
 ?>
 <body>
     <!-- Wrapper for page content -->
