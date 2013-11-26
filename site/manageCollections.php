@@ -40,7 +40,17 @@ require_once 'includes/head.php';
                                 <h4 class="panel-title">New Collection</h4>
                             </div>
                             <div class="panel-body">
-                                
+                                <form role="form" id="newCollectionForm" method="post" action="createCollection.php">
+                                    <div id="newCollectionError" class="message error alert"></div>
+                                    <div class="form-group">
+                                        <label for=""></label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-submit btn-inline" name="btnCreateCollection" value="Change">Create</button>
+                                        <button class="btn btn-cancel btn-inline" name="btnCancelCollection" value="Cancel">Cancel</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -50,7 +60,17 @@ require_once 'includes/head.php';
                                 <h4 class="panel-title">Add Item</h4>
                             </div>
                             <div class="panel-body">
-                                
+                                <form role="form" id="addItemForm" method="post" action="createCollection.php">
+                                    <div id="addItemError" class="message error alert"></div>
+                                    <div class="form-group">
+                                        <label for=""></label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-submit btn-inline" name="btnAddItem" value="Change">Create</button>
+                                        <button class="btn btn-cancel btn-inline" name="btnCancelItem" value="Cancel">Cancel</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
