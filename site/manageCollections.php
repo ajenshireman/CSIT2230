@@ -60,7 +60,7 @@ require_once 'includes/head.php';
                                 <h4 class="panel-title">Add Item</h4>
                             </div>
                             <div class="panel-body">
-                                <form role="form" id="addItemForm" method="post" action="createCollection.php">
+                                <form role="form" id="addItemForm" method="post" action="addItem.php">
                                     <div id="addItemError" class="message error alert"></div>
                                     <div class="form-group">
                                         <label for=""></label>
