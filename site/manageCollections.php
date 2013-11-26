@@ -34,7 +34,7 @@ require_once 'includes/head.php';
                             </div>
                         </div>
                     </div>
-                    <div id="addItem" class="form-swap">
+                    <div id="addItem" class="form-swap" hidden>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">Add Item</h4>
@@ -44,7 +44,7 @@ require_once 'includes/head.php';
                             </div>
                         </div>
                     </div>
-                    <div id="newCollection" class="form-swap">
+                    <div id="newCollection" class="form-swap" hidden>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">New Collection</h4>
