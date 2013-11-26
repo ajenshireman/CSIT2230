@@ -1,5 +1,6 @@
 <?php
 $currentPage = 'settings';
+$protectedPage = true;
 require_once 'includes/global.php';
 
 require_once 'includes/head.php';

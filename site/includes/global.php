@@ -30,6 +30,10 @@ $_SESSION['userTable'] = 'user';
 if ( isset($_SESSION['logged_in']) ) {
     $user = unserialize($_SESSION['user']);
     $_SESSION['user'] = serialize($userTools->get($user->getUserID()));
+} else {
+    if ( isset($protectedPage) ) {
+        header('Location: index.php');
+    }
 }
 
 ?>
