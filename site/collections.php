@@ -3,6 +3,13 @@ $currentPage = 'collection';
 $protectedPage = true;
 require_once 'includes/global.php';
 
+$queryArgs = array(
+    'select' => 'id, user_id, name, isMain',
+    'from' => 'collection',
+    'where' => "user_id = {$user->getuserID()}",
+);
+$userCollections = $db->select($queryArgs);
+
 require_once 'includes/head.php';
 ?>
 <body>
@@ -17,7 +24,10 @@ require_once 'includes/head.php';
 	    <div class="row">
 		<nav class="col-xs-12 col-sm-3 col-md-3 side-nav">
 		    <ul class="nav">
-			<li class="nav nav-pill nav-stacked"><a href="#"></a></li>
+			<?php
+			foreach ( $userCollections as $c ) {?>
+			<li class="nav nav-pill nav-stacked"><a href="#" class="collection-nav" data-collecion_id="<?php echo $c['id'] ?>"><?php echo $c['name'] ?></a></li>
+			<?php } ?>
 		    </ul>
 		</nav>
 		<div class="col-xs-12 col-sm-9 col-md-9">
