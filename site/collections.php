@@ -127,7 +127,8 @@ require_once 'includes/head.php';
     
     <!-- Custom JavaScript -->
     <script>
-	var userid = <?php echo $user->getUserID() ?>;
+	var user_id = <?php echo $user->getUserID() ?>;
+	var mainCollection_id = "<?php echo $userCollections[0]['id'] ?>";
     </script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/collections.js"></script>
