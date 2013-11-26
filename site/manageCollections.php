@@ -19,8 +19,8 @@ require_once 'includes/head.php';
                 <nav class="side-nav col-xs-12 col-sm-3">
                     <ul class="nav">
                         <li class="nav nav-pill nav-stacked"><a class="swap" data-target="veiwCollections" href="#">Veiw Collections</a></li>
-                        <li class="nav nav-pill nav-stacked"><a class="swap" data-target="addItem"href="#">Add Item</a></li>
                         <li class="nav nav-pill nav-stacked"><a class="swap" data-target="newCollection" href="#">New Collection</a></li>
+                        <li class="nav nav-pill nav-stacked"><a class="swap" data-target="addItem"href="#">Add Item</a></li>
                     </ul>
                 </nav>
                 <div class="col-xs-12 col-sm-9">
@@ -34,20 +34,20 @@ require_once 'includes/head.php';
                             </div>
                         </div>
                     </div>
-                    <div id="addItem" class="form-swap" hidden>
+                    <div id="newCollection" class="form-swap" hidden>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title">Add Item</h4>
+                                <h4 class="panel-title">New Collection</h4>
                             </div>
                             <div class="panel-body">
                                 
                             </div>
                         </div>
                     </div>
-                    <div id="newCollection" class="form-swap" hidden>
+                    <div id="addItem" class="form-swap" hidden>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title">New Collection</h4>
+                                <h4 class="panel-title">Add Item</h4>
                             </div>
                             <div class="panel-body">
                                 
