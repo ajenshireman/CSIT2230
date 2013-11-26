@@ -126,6 +126,9 @@ require_once 'includes/head.php';
     <script src="js/bootstrap.min.js"></script>
     
     <!-- Custom JavaScript -->
+    <script>
+	var userid = <?php echo $user->getUserID() ?>;
+    </script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/collections.js"></script>
 </body>
