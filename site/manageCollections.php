@@ -43,8 +43,10 @@ require_once 'includes/head.php';
                                 <form role="form" id="newCollectionForm" method="post" action="createCollection.php">
                                     <div id="newCollectionError" class="message error alert"></div>
                                     <div class="form-group">
-                                        <label for=""></label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="user_id" value="<?php echo $user->getUserID() ?>" hidden />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="collectionName" placeholder="Collection Name" />
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-submit btn-inline" name="btnCreateCollection" value="Change">Create</button>
@@ -64,7 +66,7 @@ require_once 'includes/head.php';
                                     <div id="addItemError" class="message error alert"></div>
                                     <div class="form-group">
                                         <label for=""></label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" />
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-submit btn-inline" name="btnAddItem" value="Change">Create</button>
