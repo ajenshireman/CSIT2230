@@ -49,7 +49,7 @@ require_once 'includes/head.php';
                                         <input type="text" class="form-control" name="collectionName" placeholder="Collection Name" />
                                     </div>
                                     <div class="form-group">
-                                        <button class="btn btn-submit btn-inline" name="btnCreateCollection" value="Change">Create</button>
+                                        <button class="btn btn-submit btn-inline" name="btnCreateCollection" value="Create">Create</button>
                                         <button class="btn btn-cancel btn-inline" name="btnCancelCollection" value="Cancel">Cancel</button>
                                     </div>
                                 </form>
@@ -69,7 +69,7 @@ require_once 'includes/head.php';
                                         <input type="text" class="form-control" />
                                     </div>
                                     <div class="form-group">
-                                        <button class="btn btn-submit btn-inline" name="btnAddItem" value="Change">Create</button>
+                                        <button class="btn btn-submit btn-inline" name="btnAddItem" value="Add">Add</button>
                                         <button class="btn btn-cancel btn-inline" name="btnCancelItem" value="Cancel">Cancel</button>
                                     </div>
                                 </form>
