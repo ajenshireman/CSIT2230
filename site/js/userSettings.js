@@ -34,9 +34,6 @@ $(function(){
         $('#details').show();
     });
     
-    
-    
-    
     /* Change e-mail */
     $('#emailForm').submit(function(e){
         e.preventDefault();
