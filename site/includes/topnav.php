@@ -37,7 +37,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getUsername() ?><b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li<?php if ( $currentPage == 'settings' ) { ?> class="active"<?php }?>><a href="userSettings.php">Manage Account</a></li>
-            <li><a href="#">Manage Collections</a></li>
+            <li><a href="manageCollections.php">Manage Collections</a></li>
             <li><a href="logout.php" id="logout">Log Out</a></li>
           </ul>
         </li>
