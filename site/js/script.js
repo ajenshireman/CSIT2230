@@ -77,6 +77,21 @@ function resetForms () {
     $('.form-toggle').find('input').val('');
 }
 
+/* Side Navigation */
+    $('.swap').click(function(e){
+        e.preventDefault();
+        $('.form-swap').hide().find('input').val('');
+        $('.form-swap').find('.error').hide().html('');
+        var target = '#' + $(this).attr('data-target');
+        $(target).show();
+    });
+    
+    $('.btn-cancel').click(function(e){
+        e.preventDefault();
+        $(this).closest('form').find('input').val('');
+        $('.form-swap').find('.error').hide().html('');
+    });
+
 /* for prototype: add links to info demo page to all collection images */
 $('document').ready(function(){
     setNavigation();

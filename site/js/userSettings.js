@@ -10,21 +10,14 @@ $(function(){
     
     /* Navigation */
     $('.swap').click(function(e){
-        e.preventDefault();
-        $('.form-swap').hide().find('input').val('');
-        $('.form-swap').find('.error').hide().html('');
         var target = '#' + $(this).attr('data-target');
         if ( target == '#deleteAccount') {
             $('#deleteAccountForm').hide();
             $('#confirmDeleteAccount').show();
         }
-        $(target).show();
     });
     
     $('.btn-cancel').click(function(e){
-        e.preventDefault();
-        $(this).closest('form').find('input').val('');
-        $('.form-swap').find('.error').hide().html('');
         if ( $(this).attr('name') == 'btnCancelDelete') {
             $('#deleteAccountForm').hide();
             $('#confirmDeleteAccount').show();
@@ -40,6 +33,9 @@ $(function(){
         $('.form-swap').hide();
         $('#details').show();
     });
+    
+    
+    
     
     /* Change e-mail */
     $('#emailForm').submit(function(e){
