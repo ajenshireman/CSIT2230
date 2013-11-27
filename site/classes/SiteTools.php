@@ -35,7 +35,7 @@ class SiteTools {
             $db->insert('collection', $queryArgs);
         } else {
             // Collection is user created
-            $name = mysql_real_escape_string($options['name']);
+            $name = $options['name'];
             $queryArgs = array(
                 'user_id' => "'$userID'",
                 'name'    => "'$name'",
