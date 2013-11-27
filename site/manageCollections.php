@@ -96,6 +96,7 @@ require_once 'includes/head.php';
     
     <!-- Custom JavaScript -->
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/manageCollections.js"></script>
 
 </body>
 </html>
