@@ -75,20 +75,26 @@ switch ( $operationType ) {
 
 /* Create a new collection */
 function createCollection () {
-    
-}
-
-/* Edit an eisting collection */
-function editCollection () {
     $error['success'] = 'true';
     $error['message'] = 'Create Collection';
     echo json_encode($error);
     return;
 }
 
+/* Edit an eisting collection */
+function editCollection () {
+    $error['success'] = 'true';
+    $error['message'] = 'Edit Collection';
+    echo json_encode($error);
+    return;
+}
+
 /* Delete a collection */
 function deleteCollection () {
-    
+    $error['success'] = 'true';
+    $error['message'] = 'Delete Collection';
+    echo json_encode($error);
+    return;
 }
 
 ?>
