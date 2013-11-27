@@ -2,7 +2,7 @@ $(function(){
     /* create collection */
     $('#newCollectionForm').submit(function(e){
         e.preventDefault();
-        var operationType = 'CREATE';
+        var operationType = 1;
         var userID = $('input[name="user_id"]').val();
         var collectionName = $('input[name="collectionName"').val();
         $.post('manageCollection.php', { operationType: operationType, userID: userID, collectionName: collectionName }, function(data){
