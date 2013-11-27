@@ -48,12 +48,14 @@ $error = array(
 if ( $operationType == NONE ) {
     $error['success'] = 'false';
     $error['message'] = 'Operation type not specified';
-} else if ( $userID == NONE ) {
+    echo json_encode($error);
+    return;
+} if ( $userID == NONE ) {
     $error['success'] = 'false';
     $error['message'] = 'User not specified';
+    echo json_encode($error);
+    return;
 }
-echo json_encode($error);
-return;
 
 /* Decide what to do */
 switch ( $operationType ) {
