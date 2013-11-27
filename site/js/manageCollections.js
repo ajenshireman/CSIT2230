@@ -3,9 +3,8 @@ $(function(){
     $('#newCollectionForm').submit(function(e){
         e.preventDefault();
         var operationType = 1;
-        var userID = $('input[name="user_id"]').val();
         var collectionName = $('input[name="collectionName"').val();
-        $.post('manageCollection.php', { operationType: operationType, userID: userID, collectionName: collectionName }, function(data){
+        $.post('manageCollection.php', { operationType: operationType, collectionName: collectionName }, function(data){
             if ( data ) {
                 var result = $.parseJSON(data);
                 var errorClass = '';

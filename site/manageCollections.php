@@ -43,9 +43,6 @@ require_once 'includes/head.php';
                                 <form role="form" id="newCollectionForm" method="post" action="manageCollection.php">
                                     <div id="newCollectionError" class="message error alert"></div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control hidden" name="user_id" value="<?php echo $user->getUserID() ?>" />
-                                    </div>
-                                    <div class="form-group">
                                         <input type="text" class="form-control" name="collectionName" placeholder="Collection Name" />
                                     </div>
                                     <div class="form-group">

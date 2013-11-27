@@ -30,7 +30,7 @@ define ('DELETE', 3);
 $operationType = isset($_POST['operationType']) ? $_POST['operationType'] : NONE;
 
 // User id
-$userID = isset($_POST['userID']) ? $_POST['userID'] : NONE;
+$userID = $user->getUserID();
 
 // Collection name. Used for new collection
 $collecionName = isset($_POST['collectionName']) ? mysql_real_escape_string($_POST['collectionName']) : '';
