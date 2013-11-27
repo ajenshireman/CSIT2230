@@ -32,11 +32,11 @@ $operationType = isset($_POST['operationType']) ? $_POST['operationType'] : NONE
 // User id
 $userID = isset($_POST['userID']) ? $_POST['userID'] : NONE;
 
-// Collection id. Used for EDIT and DELETE
-$collectionID = isset($_POST['collectionID']) ? $_POST['collectionID'] : '';
-
 // Collection name. Used for new collection
 $collecionName = isset($_POST['collectionName']) ? mysql_real_escape_string($_POST['collectionName']) : '';
+
+// Collection id. Used for EDIT and DELETE
+$collectionID = isset($_POST['collectionID']) ? $_POST['collectionID'] : '';
 
 // Error state and message
 $error = array(
