@@ -42,7 +42,7 @@ $collectionID = isset($_POST['collectionID']) ? $_POST['collectionID'] : '';
 $error = array(
     'success' => 'false',
     'message' => ''
-)
+);
 
 /* Make sure required fields are filled out */
 if ( $operationType == NONE ) {
@@ -52,7 +52,7 @@ if ( $operationType == NONE ) {
     $error['success'] = 'false';
     $error['message'] = 'User not specified';
 }
-echo $error;
+echo json_encode($error);
 return;
 
 /* Decide what to do */
@@ -69,7 +69,7 @@ switch ( $operationType ) {
     default:
         $error['success'] = 'false';
         $error['message'] = 'Something went wrong';
-        echo $error;
+        echo json_encode($error);
         return;
 }
 
@@ -80,7 +80,10 @@ function createCollection () {
 
 /* Edit an eisting collection */
 function editCollection () {
-    
+    $error['success'] = 'true';
+    $error['message'] = 'Create Collection';
+    echo json_encode($error);
+    return;
 }
 
 /* Delete a collection */
