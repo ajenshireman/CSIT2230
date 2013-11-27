@@ -40,7 +40,7 @@ require_once 'includes/head.php';
                                 <h4 class="panel-title">New Collection</h4>
                             </div>
                             <div class="panel-body">
-                                <form role="form" id="newCollectionForm" method="post" action="createCollection.php">
+                                <form role="form" id="newCollectionForm" method="post" action="manageCollection.php">
                                     <div id="newCollectionError" class="message error alert"></div>
                                     <div class="form-group">
                                         <input type="text" class="form-control hidden" name="user_id" value="<?php echo $user->getUserID() ?>" />
