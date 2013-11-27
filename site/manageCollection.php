@@ -77,8 +77,14 @@ switch ( $operationType ) {
 
 /* Create a new collection */
 function createCollection () {
+    if ( empty($_POST['collectionName']) ) {
+        $error['success'] = 'false';
+        $error['message'] = 'Please enter a name for your collection';
+        echo json_encode($error);
+        return;
+    }
     $error['success'] = 'true';
-    $error['message'] = 'Create Collection';
+    $error['message'] = "Created Collection: {$_POST['collectionName']}";
     echo json_encode($error);
     return;
 }
