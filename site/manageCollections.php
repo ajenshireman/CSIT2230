@@ -3,6 +3,14 @@ $currentPage = '';
 $protectedPage = true;
 require_once 'includes/global.php';
 
+// get the users collections
+$queryArgs = array(
+    'select' => 'id, user_id, name, isMain',
+    'from' => 'collection',
+    'where' => "user_id = {$user->getuserID()}",
+);
+$userCollections = $db->select($queryArgs);
+
 require_once 'includes/head.php';
 ?>
 <body>
@@ -30,7 +38,12 @@ require_once 'includes/head.php';
                                 <h4 class="panel-title">Collections</h4>
                             </div>
                             <div class="panel-body">
-                                
+                                <ul>
+                                    <?php
+                                    foreach ( $userCollections as $c ) {?>
+                                    <li><a href="#" data-collecion_id="<?php echo $c['id'] ?>"><?php echo $c['name'] ?></a></li>
+                                    <?php } ?>
+                                </ul>
                             </div>
                         </div>
                     </div>
