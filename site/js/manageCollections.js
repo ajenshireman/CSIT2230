@@ -19,6 +19,18 @@ $(function(){
             }
         });
     });
+    
+    /* Delete a collecion */
+    $('#collectionList').on('click', '.btn-deleteCollection', function(e){
+        e.preventDefault();
+        var operationType = 2;
+    });
+    
+    /* Edit a collecion */
+    $('#collectionList').on('click', '.btn-editCollection', function(e){
+        e.preventDefault();
+        var operationType = 3;
+    });
 });
 
 /* Get the user's collections and display them */
