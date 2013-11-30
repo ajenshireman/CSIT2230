@@ -10,12 +10,13 @@ $(function(){
                 var errorClass = '';
                 if ( result.success == 'true') {
                     errorClass = 'alert-success';
+                    $('input[name="collectionName"').val('');
+                    getUserCollections();
                 } else {
                     errorClass = 'alert-warning';
                 }
                 $('#newCollectionError').html(result.message).removeClass('alert-warning alert-success').addClass(errorClass).show();
-                $('input[name="collectionName"').val('');
-                getUserCollections();
+                
             }
         });
     });
