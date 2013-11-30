@@ -37,7 +37,7 @@ require_once 'includes/head.php';
                             <div class="panel-heading">
                                 <h4 class="panel-title">Collections</h4>
                             </div>
-                            <div class="panel-body">
+                            <div class="panel-body" id="collectionList">
                                 <ul>
                                     <?php
                                     foreach ( $userCollections as $c ) {?>
