@@ -24,14 +24,14 @@ $(function(){
     /* Delete a collecion */
     $('#collectionList').on('click', '.btn-deleteCollection', function(e){
         e.preventDefault();
-        var operationType = 2;
+        var operationType = 'DELETE';
         var collectionID = $(this).closest('.collection-listing').attr('data-collection_id');
     });
     
     /* Edit a collecion */
     $('#collectionList').on('click', '.btn-editCollection', function(e){
         e.preventDefault();
-        var operationType = 3;
+        var operationType = 'EDIT';
     });
 });
 

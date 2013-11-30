@@ -14,19 +14,19 @@ require_once 'includes/global.php';
  * Constants to control opertions
  */
 // No operation. Return error
-define ('NONE', 0);
+define ('NONE', 'NONE');
 
 // Create a new collection
-define ('CREATE', 1);
+define ('CREATE', 'CREATE');
 
 // Edit an existing collection
-define ('EDIT', 2);
+define ('EDIT', 'EDIT');
 
 // Delete a collecion
-define ('DELETE', 3);
+define ('DELETE', 'DELETE');
 
 // Get a list of the user's collections
-define ('GET', 4);
+define ('GET', 'GET');
 
 /* Initialize variables and get the POST data */
 // Type of operation to perform
