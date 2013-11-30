@@ -17,5 +17,12 @@ $(function(){
             }
         });
     });
-    
 });
+
+/* Get the user's collections and display them */
+function getUserCollections() {
+    var operationType = 4;
+    $.post('manageCollection.php', { operationType: operationType }, function(data){
+        $('#collectionList').html(data);
+    });
+}
