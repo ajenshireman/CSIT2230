@@ -17,14 +17,14 @@ class SiteTools {
      *     name: Name of the collection
      *     type: Type of itmes in the collection. Not currently implemented
      */  
-    static function createCollection ( $user, $options ) {
+    static function createCollection ( $user, $options = array() ) {
         // Create a database connection object
         $db = new DB();
         
         // Set common variables
         $userID = $user->getUserID();
         
-        if ( empty($options) || $options == true || $options['isMain'] == true ) {
+        if ( $options['isMain'] == true ) {
             // Collection is a main collection
             $queryArgs = array(
                 'user_id' => "'$userID'",
@@ -41,6 +41,7 @@ class SiteTools {
                 'name'    => "'$name'",
                 'isMain'  => 'false'
             );
+            //echo $db->getInsert('collection', $queryArgs);
             $db->insert('collection', $queryArgs);
         }
     }
