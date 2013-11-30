@@ -56,5 +56,15 @@ class SiteTools {
         );
         return $db->select($queryArgs);
     }
+    
+    static function printUserCollections ( $user ) {
+        $userCollections = SiteTools::getUserCollections($user);
+        $collections =  "<ul>\n";
+        foreach ( $userCollections as $c ) {
+            $collections .= "<li><a href=\"#\" data-collecion_id=\"{$c['id']}\">{$c['name']}</a></li>\n";
+        }
+        $collections .= "</ul>\n";
+        return $collections;
+    }
 }
 ?>
