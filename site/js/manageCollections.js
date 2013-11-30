@@ -24,6 +24,7 @@ $(function(){
     $('#collectionList').on('click', '.btn-deleteCollection', function(e){
         e.preventDefault();
         var operationType = 2;
+        var collectionID = $(this).closest('.collection-listing').attr('data-collection_id');
     });
     
     /* Edit a collecion */
