@@ -45,5 +45,16 @@ class SiteTools {
             $db->insert('collection', $queryArgs);
         }
     }
+    
+    static function getUserCollections ( $user ) {
+        $db = new DB();
+        $userID = $user->getUserID();
+        $queryArgs = array(
+            'select' => 'id, user_id, name, isMain',
+            'from' => 'collection',
+            'where' => "user_id = '$userID'",
+        );
+        return $db->select($queryArgs);
+    }
 }
 ?>
