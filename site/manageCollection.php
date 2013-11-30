@@ -25,6 +25,9 @@ define ('EDIT', 2);
 // Delete a collecion
 define ('DELETE', 3);
 
+// Get a list of the user's collections
+define ('GET', 4);
+
 /* Initialize variables and get the POST data */
 // Type of operation to perform
 $operationType = isset($_POST['operationType']) ? $_POST['operationType'] : NONE;
@@ -68,6 +71,9 @@ switch ( $operationType ) {
     case DELETE:
         deleteCollection();
         break;
+    case GET:
+        getUserCollections();
+        break;
     default:
         $error['success'] = 'false';
         $error['message'] = 'Something went wrong';
@@ -107,6 +113,22 @@ function deleteCollection () {
     $error['message'] = 'Delete Collection';
     echo json_encode($error);
     return;
+}
+
+/* Return a list of the user's collections */
+function getUserCollections () {
+    $user = unserialize($_SESSION['user']);
+    $userCollections = SiteTools::getUserCollections($user);
+    
+    $collections =  '<ul>';
+    
+    foreach ( $userCollections as $c ) {
+        $collections .= "<li><a href=\"#\" data-collecion_id=\"{$c['id']}\">{$c['name']}</a></li>";
+    }
+    
+    $collections .= '</ul>';
+    
+    echo $collections;
 }
 
 ?>
