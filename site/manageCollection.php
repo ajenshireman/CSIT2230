@@ -118,17 +118,7 @@ function deleteCollection () {
 /* Return a list of the user's collections */
 function getUserCollections () {
     $user = unserialize($_SESSION['user']);
-    $userCollections = SiteTools::getUserCollections($user);
-    
-    $collections =  '<ul>';
-    
-    foreach ( $userCollections as $c ) {
-        $collections .= "<li><a href=\"#\" data-collecion_id=\"{$c['id']}\">{$c['name']}</a></li>";
-    }
-    
-    $collections .= '</ul>';
-    
-    echo $collections;
+    echo SiteTools::printUserCollections($user);
 }
 
 ?>

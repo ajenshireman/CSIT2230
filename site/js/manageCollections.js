@@ -2,7 +2,7 @@ $(function(){
     /* create collection */
     $('#newCollectionForm').submit(function(e){
         e.preventDefault();
-        var operationType = 1;
+        var operationType = 'CREATE';
         var collectionName = $('input[name="collectionName"').val();
         $.post('manageCollection.php', { operationType: operationType, collectionName: collectionName }, function(data){
             if ( data ) {
@@ -37,7 +37,7 @@ $(function(){
 
 /* Get the user's collections and display them */
 function getUserCollections() {
-    var operationType = 4;
+    var operationType = 'GET';
     $.post('manageCollection.php', { operationType: operationType }, function(data){
         $('#collectionList').html(data);
     });
