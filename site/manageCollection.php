@@ -33,7 +33,7 @@ $operationType = isset($_POST['operationType']) ? $_POST['operationType'] : NONE
 $userID = $user->getUserID();
 
 // Collection name. Used for new collection
-$collectionName = !empty($_POST['collectionName']) ? mysql_real_escape_string($_POST['collectionName']) : '';
+//$collectionName = empty($_POST['collectionName']) ? $_POST['collectionName'] : '';
 
 // Collection id. Used for EDIT and DELETE
 $collectionID = isset($_POST['collectionID']) ? $_POST['collectionID'] : '';
@@ -84,7 +84,9 @@ function createCollection () {
         return;
     }
     $collectionName = $_POST['collectionName'];
-    //SiteTools::createCollection($user, array('name' => "'$collectionName'"))
+    $escapedCollectionName = mysql_real_escape_string($_POST['collectionName']);
+    $user = unserialize($_SESSION['user']);
+    SiteTools::createCollection($user, array('name' => $escapedCollectionName, 'isMain' => false));
     $error['success'] = 'true';
     $error['message'] = "Created Collection: $collectionName";
     echo json_encode($error);
