@@ -61,7 +61,7 @@ class SiteTools {
         $userCollections = SiteTools::getUserCollections($user);
         $collections =  "<ul>\n";
         foreach ( $userCollections as $c ) {
-            $collections .= "<li><a href=\"#\" data-collecion_id=\"{$c['id']}\">{$c['name']}</a></li>\n";
+            $collections .= "<li data-collecion_id=\"{$c['id']}\"><a href=\"#\">{$c['name']}</a></li>\n";
         }
         $collections .= "</ul>\n";
         return $collections;
