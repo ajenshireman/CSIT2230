@@ -59,7 +59,7 @@ class SiteTools {
     
     static function printUserCollections ( $user ) {
         $userCollections = SiteTools::getUserCollections($user);
-        $collections =  "<ul>\n";
+        $collections =  "<ul style=\"list-style-type: none; padding-left: 0\">\n";
         foreach ( $userCollections as $c ) {
             $collections .= "<li class=\"collection-listing\" data-collection_id=\"{$c['id']}\">{$c['name']}\n";
             // Edit button. Disabled for now.
