@@ -62,8 +62,10 @@ class SiteTools {
         $collections =  "<ul>\n";
         foreach ( $userCollections as $c ) {
             $collections .= "<li class=\"collection-listing\" data-collection_id=\"{$c['id']}\">{$c['name']}\n";
+            // Edit button. Disabled for now.
             //$collections .= "<button class=\"btn btn-default btn-xs btn-editCollection\" role=\"button\">Edit</button>\n";
-            $collections .= "<button class=\"btn btn-default btn-xs btn-deleteCollection\" role=\"button\">Delete</button>\n";
+            // Delete button. Disabled for now.
+            //$collections .= "<button class=\"btn btn-default btn-xs btn-deleteCollection\" role=\"button\">Delete</button>\n";
             $collections .= "</li>\n";
         }
         $collections .= "</ul>\n";
