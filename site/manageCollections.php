@@ -64,8 +64,24 @@ require_once 'includes/head.php';
                                 <form role="form" id="addItemForm" method="post" action="addItem.php">
                                     <div id="addItemError" class="message error alert"></div>
                                     <div class="form-group">
-                                        <label for=""></label>
-                                        <input type="text" class="form-control" />
+                                        <select name="input_collection">
+                                            <!-- Select user's collections -->
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="input_title" placeholder="Title" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="input_year" placeholder="Year" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="input_description" placeholder="Description" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="upload_itemImage"></label>
+                                    </div>
+                                    <div class="form-group">
+                                        
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-submit btn-inline" name="btnAddItem" value="Add">Add</button>
