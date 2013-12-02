@@ -22,7 +22,7 @@ require_once 'includes/head.php';
 	<div class="container">
 	  <div id="body">
 	    <div class="row">
-		<nav class="col-xs-12 col-sm-3 col-md-3 side-nav">
+		<nav class="col-xs-12 col-sm-3 side-nav">
 		    <ul class="nav">
 			<?php
 			foreach ( $userCollections as $c ) {?>
@@ -30,15 +30,17 @@ require_once 'includes/head.php';
 			<?php } ?>
 		    </ul>
 		</nav>
-		<div class="col-xs-12 col-sm-9 col-md-9">
-		    <div class="col-xs-12 collection-header">
-			<h3 id="collectionTitle"></h3>
-		    </div>
-		    <div class="col-xs-12 collection-grid" id="collectionGrid">
-			<div class="collection-item" data-id="">
-			    <img class="itemImageSmall" src="" />
-			</div>
-		    </div>
+		<div class="col-xs-12 col-sm-9">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"></h4>
+                        </div>
+                        <div class="panel-body collection-grid" id="collectionGrid">
+                            <div class="collection-item" data-id="">
+                                <img class="itemImageSmall" src="" />
+                            </div>
+                        </div>
+                    </div>
 		</div>
 	    </div>
 	    
