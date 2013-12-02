@@ -37,9 +37,11 @@ require_once 'includes/head.php';
                         </div>
                         <div class="panel-body collection-grid" id="collectionGrid">
                             <div id="collectionError" class="message error alert" hidden ></div>
+			    <!--
                             <div class="collection-item" data-id="">
                                 <img class="itemImageSmall" src="" />
                             </div>
+			    -->
                         </div>
                     </div>
 		</div>
