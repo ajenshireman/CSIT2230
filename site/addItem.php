@@ -3,6 +3,7 @@ require_once 'includes/global.php';
 $demoMode = true;
 $uploadPath = 'items/image/';
 
+$itemTypeID = 1; // $_POST['itemTypeID'];
 $collectionID = $_POST['input_collection'];
 $title = mysql_real_escape_string($_POST['input_title']);
 $description = mysql_real_escape_string($_POST['input_description']);
@@ -27,7 +28,7 @@ EOF;
 } else {
     if ( move_uploaded_file($file['tmp_name'], $fileLocation) ) {
         $fileData = array(
-            'itemType_id' => '1',
+            'itemType_id' => "'$itemTypeID'",
             'imageName' => "'$fileName'",
             'imageSize' => $file['size'],
             'imageType' => "'$fileType'",
