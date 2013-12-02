@@ -64,8 +64,21 @@ require_once 'includes/head.php';
                                 <form role="form" id="addItemForm" enctype="multipart/form-data" method="post" action="addItem.php">
                                     <div id="addItemError" class="message error alert"></div>
                                     <div class="form-group">
-                                        <select name="input_collection">
+                                        <select class="form-control" name="input_collection">
                                             <!-- Select user's collections -->
+                                            <?php
+                                            $args = array (
+                                                'select' => 'id, name',
+                                                'from'   => 'collection',
+                                                'where'  => "user_id = {$user->getUserID()}"
+                                            );
+                                            $result = $db->select($args);
+                                            foreach ( $result as $row ) {
+                                                $id = $row['id'];
+                                                $name = $row['name'];
+                                                print '<option value="'.$id.'">'.$name.'</option>';
+                                            }
+                                            ?>
                                         </select>
                                     </div>
                                     <div class="form-group">
