@@ -91,7 +91,6 @@ class SiteTools {
     
     static function collectionIsMain ( $collectionID ) {
         $db = new DB();
-        $userID = $user->getUserID();
         $queryArgs = array(
             'select' => 'id, isMain',
             'from' => 'collection',
