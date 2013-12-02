@@ -113,19 +113,20 @@ function setNavigation () {
     
     // for collection grid, show the modal info window
     //$('.collection-grid img.itemImageSmall').wrap('<a data-toggle="modal" href="#itemInfo"></a>');
+    /*
     $('.collection-grid img.itemImageSmall').on('click', function(){
         // get the item id
         
         // open a modal window with the information
         $('#itemInfo').modal();
     });
-    
+    *
     // link Collection titles in the main page to the grid page
     $('.collection .collection-header h1').wrapInner('<a href="#"></a>');
     $('.collection .collection-header h1').on('click', function(){
         window.location.href='collectionGrid.php';
     });
-    
+    */
 }
 
 function initRating () {
