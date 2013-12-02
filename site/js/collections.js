@@ -12,9 +12,8 @@ $(function(){
         var collectionName = $(this).html();
         $('#collectionName').html(collectionName);
         $.post('collection.php', { collectionID: collectionID }, function(data){
-            //$('#collectionError').html(data).show();
-            //return;
             var result = $.parseJSON(data);
+            $('#collectionGrid').html('');
             var errorClass = '';
             if ( result.success == 'true') {
                 errorClass = 'alert-success';
@@ -33,7 +32,6 @@ $(function(){
     $('.collection-grid').on('click', 'img.itemImageSmall', function(e){
         e.preventDefault();
         var itemID = $(this).closest('.collection-item').attr('data-id');
-        //alert('Item ID = ' + itemID);
         $.post('itemInfo.php', { itemID: itemID }, function(data){
             var details = $.parseJSON(data);
             var modal = $('#itemInfo');
