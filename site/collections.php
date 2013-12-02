@@ -26,16 +26,17 @@ require_once 'includes/head.php';
 		    <ul class="nav">
 			<?php
 			foreach ( $userCollections as $c ) {?>
-			<li class="nav nav-pill nav-stacked"><a href="#" class="collection-nav" data-collecion_id="<?php echo $c['id'] ?>"><?php echo $c['name'] ?></a></li>
+			<li class="nav nav-pill nav-stacked"><a href="#" class="collection-nav" data-collection_id="<?php echo $c['id'] ?>"><?php echo $c['name'] ?></a></li>
 			<?php } ?>
 		    </ul>
 		</nav>
 		<div class="col-xs-12 col-sm-9">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4 class="panel-title"></h4>
+                            <h4 class="panel-title" id="collectionName"></h4>
                         </div>
                         <div class="panel-body collection-grid" id="collectionGrid">
+                            <div id="collectionError" class="message error alert" hidden ></div>
                             <div class="collection-item" data-id="">
                                 <img class="itemImageSmall" src="" />
                             </div>
