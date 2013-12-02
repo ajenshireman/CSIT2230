@@ -5,7 +5,6 @@ $uploadPath = 'items/image/';
 
 $collectionID = $_POST['input_collection'];
 $title = mysql_real_escape_string($_POST['input_title']);
-$year = mysql_real_escape_string($_POST['input_year']);
 $description = mysql_real_escape_string($_POST['input_description']);
 $file = $_FILES['upload_itemImage'];
 $fileName = $file['name'];
@@ -46,7 +45,6 @@ EOF;
         $queryArgs = array(
             'item_id' => "'$itemID'",
             'title' => "'$title'",
-            'year' => "'$year'",
             'description' => "'$description'"
         );
         $db->insert('movie', $queryArgs);
