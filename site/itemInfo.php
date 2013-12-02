@@ -9,6 +9,8 @@ $error = array(
     'description' => '',
     'imagePath' => '',
     'imageName' => '',
+    'imageType' => '',
+    'imageSize' => '',
 );
 
 // Initialize POST variables
@@ -30,6 +32,8 @@ $error['title'] = $item['name'];
 $error['description'] = $item['description'];
 $error['imagePath'] = $item['imagePath'];
 $error['imageName'] = $item['imageName'];
+$error['imageType'] = $item['imageType'];
+$error['imageSize'] = SiteTools::bytesToSize($item['imageSize']);
 echo json_encode($error);
 
 ?>
