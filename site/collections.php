@@ -63,35 +63,12 @@ require_once 'includes/head.php';
 				    <div class="col-xs-12 itemInfo-header"><!--8 col-sm-9 col-md-10">-->
 					<h4><span id="title"></span> (<span id="year"></span>)</h4>
 				    </div>
-				    <!--
-				    <div class="col-xs-12 itemInfo-header">
-					<button type="button" class="btn btn-default btn-collection" id="rating">
-					    <span class="glyphicon glyphicon-star"> </span>
-					    <span class="glyphicon glyphicon-star"> </span>
-					    <span class="glyphicon glyphicon-star"> </span>
-					    <span class="glyphicon glyphicon-star"> </span>
-					    <span class="glyphicon glyphicon-star"> </span>
-					</button>
-					<button type="button" class="btn btn-default btn-collection" id="favorite">
-					    <span class="glyphicon glyphicon-thumbs-up"> </span>
-					</button>
-				    </div>
-				    -->
 				    <div class="col-xs-12 itemDetails" id="details">
 					<ul class="list-group">
 					    <li class="list-group-item" id="description">Description: <span class="details"></span></li>
 					    <li class="list-group-item" id="fileName">File Name: <span class="details"></span></li>
 					    <li class="list-group-item" id="fileType">MIME Type: <span class="details"></span></li>
 					    <li class="list-group-item" id="fileSize">File Size: <span class="details"></span></li>
-					    <!--
-					    <li class="list-group-item" id="format">Format: <span class="details"></span></li>
-					    <li class="list-group-item" id="studio">Studio: <span class="details"></span></li>
-					    <li class="list-group-item" id="prducer">Producer: <span class="details"></span></li>
-					    <li class="list-group-item" id="director">Director: <span class="details"></span></li>
-					    <li class="list-group-item" id="actors">Starring: <span class="details"></span></li>
-					    <li class="list-group-item" id="genre">Genre: <span class="details"></span></li>
-					    <li class="list-group-item" id="tags">[Action] [Super Heroes] [Comic Book] [Avengers]</li>
-					    -->
 					</ul>
 				    </div>
 				</div>
