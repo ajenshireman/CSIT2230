@@ -33,6 +33,15 @@ $(function(){
         e.preventDefault();
         var operationType = 'EDIT';
     });
+
+    /* add an item; link to form page */ 
+    $('.swap').click(function(e){
+        var target = '#' + $(this).attr('data-target');
+        if ( target == '#addItem') {
+            window.location.replace('addItemForm.php');
+        }
+    });
+    /**/
 });
 
 /* Get the user's collections and display them */
