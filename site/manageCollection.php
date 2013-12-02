@@ -116,6 +116,8 @@ function editCollection () {
 
 /* Delete a collection */
 function deleteCollection () {
+    $collectionID = $_POST['collectionID'];
+    SiteTools::deleteCollection($collectionID);
     $error['success'] = 'true';
     $error['message'] = 'Delete Collection';
     echo json_encode($error);
