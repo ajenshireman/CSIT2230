@@ -28,5 +28,22 @@ $(function(){
         });
         $('#collectionPane').show();
     });
+    
+    /* Bring up item info */
+    $('.collection-grid').on('click', 'img.itemImageSmall', function(e){
+        e.preventDefault();
+        var itemID = $(this).closest('.collection-item').attr('data-id');
+        //alert('Item ID = ' + itemID);
+        $.post('itemInfo.php', { itemID: itemID }, function(data){
+            var details = $.parseJSON(data);
+            var modal = $('#itemInfo');
+            modal.find('.itemImage').attr('src', details.imagePath + details.imageName);
+            modal.find('#title').html(details.title);
+            modal.find('#description').find('.details').html(details.description);
+            modal.find('#mimeType').find('.details').html(details.imageType);
+            modal.find('#fileSize').find('.details').html(details.imageSize);
+            modal.modal();
+        });
+    });
 });
 
