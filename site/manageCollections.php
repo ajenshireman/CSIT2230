@@ -78,10 +78,12 @@ require_once 'includes/head.php';
                                         <input type="text" class="form-control" name="input_description" placeholder="Description" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="upload_itemImage"></label>
+                                        <label for="upload_itemImage">Item image: </label>
+                                        <input type="file" name="upload_itemImage" />
                                     </div>
                                     <div class="form-group">
-                                        
+                                        <label for="upload_itemFile">Select file to upload: </label>
+                                        <input type="file" name="upload_itemFile" />
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-submit btn-inline" name="btnAddItem" value="Add">Add</button>
