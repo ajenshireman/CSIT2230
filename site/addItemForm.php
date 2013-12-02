@@ -20,7 +20,7 @@ require_once 'includes/head.php';
                 </div>
                 <div class="panel-body">
                     <form role="form" id="addItemForm" enctype="multipart/form-data" method="post" action="addItem.php">
-                        <div id="addItemError" class="message error alert"></div>
+                        <div id="addItemError" class="message error alert" hidden></div>
                         <div class="form-group">
                             <select class="form-control" name="input_collection">
                                 <!-- Select user's collections -->
@@ -41,9 +41,6 @@ require_once 'includes/head.php';
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" name="input_title" placeholder="Title" />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="input_year" placeholder="Year" />
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" name="input_description" placeholder="Description" />
