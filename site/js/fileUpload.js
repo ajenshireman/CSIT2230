@@ -8,6 +8,12 @@ $(function(){
         e.preventDefault();
         //uploadFile();
     });
+    
+    $('#addItemForm').submit(function(e){
+        e.preventDefault();
+        //alert('submit');
+        uploadFile();
+    });
 });
 
 // Calculate the size of the file in kb, mb, etc
