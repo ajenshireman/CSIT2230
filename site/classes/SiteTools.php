@@ -46,6 +46,12 @@ class SiteTools {
         }
     }
     
+    static function deleteCollection ( $collectionID ) {
+        $db = new DB();
+        $query = "delete from collection where id = $collectionID limit 1";
+        $db->query($query);
+    }
+    
     static function getUserCollections ( $user ) {
         $db = new DB();
         $userID = $user->getUserID();
