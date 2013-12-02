@@ -1,5 +1,5 @@
 <?php
-$currentPage = '';
+$currentPage = 'manageCollections';
 $protectedPage = true;
 require_once 'includes/global.php';
 
