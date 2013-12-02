@@ -95,6 +95,54 @@ require_once 'includes/head.php';
 	    </div>
 	    <!-- /.modal -->
 	    
+	    <!-- modal dialog for item info --
+	    <div class="modal fade" id="itemInfo" tabindex=-1 role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-itemInfo">
+		    <div class="modal-content">
+			<div class="modal-header">
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+			    <div class="row itemInfo">
+				<div class="col-xs-12 col-sm-4 col-md-3 text-center"> 
+				    <img class="itemImage" src="" />
+				</div>
+				<div class="col-xs-12 col-sm-8 col-md-9">
+				    <div class="col-xs-12 itemInfo-header">
+					<h4><span id="title"></span> (<span id="year"></span>)</h4>
+				    </div>
+				    <div class="col-xs-12 itemInfo-header">
+					<button type="button" class="btn btn-default btn-collection" id="rating">
+					    <span class="glyphicon glyphicon-star"> </span>
+					    <span class="glyphicon glyphicon-star"> </span>
+					    <span class="glyphicon glyphicon-star"> </span>
+					    <span class="glyphicon glyphicon-star"> </span>
+					    <span class="glyphicon glyphicon-star"> </span>
+					</button>
+					<button type="button" class="btn btn-default btn-collection" id="favorite">
+					    <span class="glyphicon glyphicon-thumbs-up"> </span>
+					</button>
+				    </div>
+				    <div class="col-xs-12 itemDetails" id="details">
+					<ul class="list-group">
+					    <li class="list-group-item" id="description">Description: <span class="details"></span></li>
+					    <li class="list-group-item" id="format">Format: <span class="details"></span></li>
+					    <li class="list-group-item" id="studio">Studio: <span class="details"></span></li>
+					    <li class="list-group-item" id="prducer">Producer: <span class="details"></span></li>
+					    <li class="list-group-item" id="director">Director: <span class="details"></span></li>
+					    <li class="list-group-item" id="actors">Starring: <span class="details"></span></li>
+					    <li class="list-group-item" id="genre">Genre: <span class="details"></span></li>
+					    <li class="list-group-item" id="tags">[Action] [Super Heroes] [Comic Book] [Avengers]</li>
+					</ul>
+				    </div>
+				</div>
+			    </div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+	    <!-- /.modal -->
+	    
 	  </div>
 	  <!-- / #body -->
 	</div>
