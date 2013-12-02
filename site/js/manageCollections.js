@@ -26,6 +26,21 @@ $(function(){
         e.preventDefault();
         var operationType = 'DELETE';
         var collectionID = $(this).closest('.collection-listing').attr('data-collection_id');
+        var doDelete = confirm('Do you really want to delete this collection?');
+        if ( doDelete == true ) {
+            $.post('manageCollection.php', {  operationType: operationType, collectionID: collectionID }, function(data){
+                var result = $.parseJSON(data);
+                var errorClass = '';
+                if ( result.success == 'true') {
+                    errorClass = 'alert-success';
+                    $('input[name="collectionName"').val('');
+                    getUserCollections();
+                } else {
+                    errorClass = 'alert-warning';
+                }
+                $('#deleteCollectionError').html(result.message).removeClass('alert-warning alert-success').addClass(errorClass).show();
+            });
+        }
     });
     
     /* Edit a collecion */
