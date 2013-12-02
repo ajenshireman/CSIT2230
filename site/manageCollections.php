@@ -85,9 +85,6 @@ require_once 'includes/head.php';
                                         <input type="text" class="form-control" name="input_title" placeholder="Title" />
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="input_year" placeholder="Year" />
-                                    </div>
-                                    <div class="form-group">
                                         <input type="text" class="form-control" name="input_description" placeholder="Description" />
                                     </div>
                                     <div class="form-group">
