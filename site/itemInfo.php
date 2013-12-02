@@ -5,7 +5,7 @@ require_once 'includes/global.php';
 $error = array(
     'success' => 'false',
     'message' => '',
-    'name'    => '',
+    'title'   => '',
     'description' => '',
     'imagePath' => '',
     'imageName' => '',
@@ -26,7 +26,7 @@ $result = $db->select($queryArgs);
 $item = $result[0];
 $error['success'] = true;
 $error['message'] = '';
-$error['name'] = $item['name'];
+$error['title'] = $item['name'];
 $error['description'] = $item['description'];
 $error['imagePath'] = $item['imagePath'];
 $error['imageName'] = $item['imageName'];
