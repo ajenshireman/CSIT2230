@@ -41,8 +41,8 @@ EOF;
         $db = new DB();
         $itemID = $db->insert('item', $fileData);
         // get the is for the user's main collection
-        $mainCollection = SiteTools::getMainColection($user);
-        $mainCollectionID = $mainCollection['id'];
+        $mainCollection = SiteTools::getMainCollection($user);
+        $mainCollectionID = $mainCollection[0]['id'];
         // Put the item in the main collection
         $queryArgs = array(
             'collection_id' => "'$mainCollectionID'",
