@@ -77,5 +77,32 @@ class SiteTools {
         $i = floor(log($bytes, 1204));
         return @round($bytes / pow(1024, $i), $precision).' '.$unit[$i];
     }
+    
+    static function getMainCollection ( $user ) {
+        $db = new DB();
+        $userID = $user->getUserID();
+        $queryArgs = array(
+            'select' => 'id, user_id, name, isMain',
+            'from' => 'collection',
+            'where' => "user_id = '$userID' and isMain = 1",
+        );
+        return $db->select($queryArgs);
+    }
+    
+    static function collectionIsMain ( $collectionID ) {
+        $db = new DB();
+        $userID = $user->getUserID();
+        $queryArgs = array(
+            'select' => 'id, isMain',
+            'from' => 'collection',
+            'where' => "id = $collectionID",
+        );
+        $result =  $db->select($queryArgs);
+        if ( $result[0]['isMain'] == 1 ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 ?>
