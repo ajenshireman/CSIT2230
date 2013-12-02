@@ -17,12 +17,10 @@ $db = new DB();
 $queryArgs = array(
     'select' => "ci.collection_id as 'COLLECTIONID', ci.item_id as 'ITEMID', c.id, c.name as 'COLLECTIONNAME', i.id, i.imagePath as 'PATH', i.imageName as 'IMAGENAME'",
     'from'   => 'collection c, item i, collection_item ci',
-    'where'  => 'i.id = ci.item_id and c.id = ci.collection_id'
+    'where'  => "i.id = ci.item_id and c.id = ci.collection_id and ci.collection_id = $collectionID"
 );
-//echo $db->getSelect($queryArgs);
-//return;
-
 $result = $db->select($queryArgs);
+
 if ( $result ) {
     $output = '';
     foreach ( $result as $item ) {
