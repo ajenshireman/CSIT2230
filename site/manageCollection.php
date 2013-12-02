@@ -28,6 +28,10 @@ define ('DELETE', 'DELETE');
 // Get a list of the user's collections
 define ('GET', 'GET');
 
+// Get a list of the user's collections for a drop down
+define ('GETOPTIONS', 'GETOPTIONS');
+
+
 /* Initialize variables and get the POST data */
 // Type of operation to perform
 $operationType = isset($_POST['operationType']) ? $_POST['operationType'] : NONE;
@@ -74,6 +78,9 @@ switch ( $operationType ) {
     case GET:
         getUserCollections();
         break;
+    case GETOPTIONS:
+        getUserCollectionOptions();
+        break;
     default:
         $error['success'] = 'false';
         $error['message'] = 'Something went wrong';
@@ -119,6 +126,12 @@ function deleteCollection () {
 function getUserCollections () {
     $user = unserialize($_SESSION['user']);
     echo SiteTools::printUserCollections($user);
+}
+
+/* Return a list of the user's collections formatted for a <select> */
+function getUserCollectionOptions () {
+    $user = unserialize($_SESSION['user']);
+    echo SiteTools::printUserCollectionOptions($user);
 }
 
 ?>
