@@ -74,6 +74,15 @@ class SiteTools {
         return $collections;
     }
     
+    static function printUserCollectionOptions ( $user ) {
+        $userCollections = SiteTools::getUserCollections($user);
+        $options = '';
+        foreach ( $userCollections as $c ) {
+            $options .= "<option value=\"{$c['id']}\">{$c['name']}</option>\n";
+        }
+        return $options;
+    }
+    
     static function bytesToSize ( $bytes, $precision = 2 ) {
         $unit = array('B', 'KB', 'MB', 'GB');
         $i = floor(log($bytes, 1204));
