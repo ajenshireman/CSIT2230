@@ -44,12 +44,7 @@ EOF;
             'item_id'       => "'$itemID'",
         );
         $db->insert('collection_item', $queryArgs);
-        $queryArgs = array(
-            'item_id' => "'$itemID'",
-            'title' => "'$title'",
-            'description' => "'$description'"
-        );
-        $db->insert('movie', $queryArgs);
+        
         echo <<<EOF
 <p>
     Upload of your file, {$fileName}, is complete.<br />
