@@ -67,17 +67,7 @@ require_once 'includes/head.php';
                                         <select class="form-control" name="input_collection">
                                             <!-- Select user's collections -->
                                             <?php
-                                            $args = array (
-                                                'select' => 'id, name',
-                                                'from'   => 'collection',
-                                                'where'  => "user_id = {$user->getUserID()}"
-                                            );
-                                            $result = $db->select($args);
-                                            foreach ( $result as $row ) {
-                                                $id = $row['id'];
-                                                $name = $row['name'];
-                                                print '<option value="'.$id.'">'.$name.'</option>';
-                                            }
+                                            echo SiteTools::printUserCollectionOptions($user);
                                             ?>
                                         </select>
                                     </div>

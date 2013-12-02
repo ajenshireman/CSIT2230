@@ -42,4 +42,8 @@ function getUserCollections() {
     $.post('manageCollection.php', { operationType: operationType }, function(data){
         $('#collectionList').html(data);
     });
+    var operationType = 'GETOPTIONS';
+    $.post('manageCollection.php', { operationType: operationType }, function(data){
+        $('select[name="input_collection"]').html(data);
+    });
 }
