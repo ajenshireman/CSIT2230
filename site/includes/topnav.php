@@ -17,7 +17,7 @@
         <!-- Pages only vivible when logged in -->
         <?php
         if ( isset($_SESSION['logged_in']) ) {?>
-        <li id="topnav-collection"<?php if ( $currentPage == 'collection' ) { ?> class="active"<?php }?>><a href="collectionGrid.php">Collections</a></li>
+        <li id="topnav-collection"<?php if ( $currentPage == 'collection' ) { ?> class="active"<?php }?>><a href="collections.php">Collections</a></li>
         <?php } ?>
         <!-- About, Changelog, and Archive. Visible to all -->
         <li<?php if ( $currentPage == 'about' || $currentPage == 'changelog' || $currentPage == 'archive' ) { ?> class="dropdown active"<?php } else { ?> class="dropdown"<?php } ?> id="topnav-whatsNew">
