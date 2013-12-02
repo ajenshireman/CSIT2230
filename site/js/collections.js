@@ -4,7 +4,7 @@ $(function(){
         e.preventDefault();
         var collectionID = $(this).attr('data-collection_id');
         $.post('collection.php', { collectionID: collectionID }, function(data){
-            alert(data);
+            $('#collectionError').html(data).show();
             return;
             var result = $.parseJSON(data);
             var errorClass = '';
