@@ -79,7 +79,16 @@ require_once 'includes/head.php';
                                     </div>
                                     <div class="form-group">
                                         <label for="upload_itemImage">Item image: </label>
-                                        <input type="file" name="upload_itemImage" />
+                                        <input type="file" name="upload_itemImage" id="upload_itemImage" />
+                                    </div>
+                                    <div class="fileInfo">
+                                        <div id="fileName"></div>
+                                        <div id="fileSize"></div>
+                                        <div id="fileType"></div>
+                                    </div>
+                                    <div class="uploadProgress">
+                                        <div id="uploadPercent"></div>
+                                        <div id="uploadResponse"></div>
                                     </div>
                                     <!--
                                     <div class="form-group">
