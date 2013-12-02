@@ -40,6 +40,8 @@ ENGINE = InnoDB;
 CREATE TABLE `item` (
   `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `itemType_id` BIGINT(20) UNSIGNED NOT NULL,
+  `name` VARCHAR(255) NULL,
+  `description` TEXT NULL,
   `imagePath` VARCHAR(255) NOT NULL,
   `imageName` VARCHAR(255) NOT NULL,
   `imageType` VARCHAR(255) NOT NULL,
@@ -77,10 +79,8 @@ ENGINE = InnoDB;
 
 CREATE TABLE `movie` (
   `item_id` BIGINT(20) UNSIGNED NOT NULL,
-  `title` VARCHAR(255) NULL,
   `year` CHAR(4) NULL,
   `genre` VARCHAR(255) NULL,
-  `description` TEXT NULL,
   `filePath` VARCHAR(255) NULL,
   `filename` VARCHAR(255) NULL,
   `fileType` VARCHAR(255) NULL,
