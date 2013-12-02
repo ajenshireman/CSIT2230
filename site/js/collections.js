@@ -40,7 +40,8 @@ $(function(){
             modal.find('.itemImage').attr('src', details.imagePath + details.imageName);
             modal.find('#title').html(details.title);
             modal.find('#description').find('.details').html(details.description);
-            modal.find('#mimeType').find('.details').html(details.imageType);
+            modal.find('#fileName').find('.details').html(details.fileName);
+            modal.find('#fileType').find('.details').html(details.imageType);
             modal.find('#fileSize').find('.details').html(details.imageSize);
             modal.modal();
         });
