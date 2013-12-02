@@ -61,7 +61,7 @@ require_once 'includes/head.php';
                                 <h4 class="panel-title">Add Item</h4>
                             </div>
                             <div class="panel-body">
-                                <form role="form" id="addItemForm" method="post" action="addItem.php">
+                                <form role="form" id="addItemForm" enctype="multipart/form-data" method="post" action="addItem.php">
                                     <div id="addItemError" class="message error alert"></div>
                                     <div class="form-group">
                                         <select name="input_collection">
