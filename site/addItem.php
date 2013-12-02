@@ -1,6 +1,6 @@
 <?php
 require_once 'includes/global.php';
-$demoMode = true;
+$demoMode = false;
 $uploadPath = 'items/image/';
 
 $itemTypeID = 1; // $_POST['itemTypeID'];
@@ -28,18 +28,20 @@ EOF;
 } else {
     if ( move_uploaded_file($file['tmp_name'], $fileLocation) ) {
         $fileData = array(
-            'itemType_id' => "'$itemTypeID'",
-            'imageName' => "'$fileName'",
-            'imageSize' => $file['size'],
-            'imageType' => "'$fileType'",
-            'imagePath' => "'$uploadPath'",
-            'addedOn' => "'$uploadTime'"
+            'itemType_id' => $itemTypeID,
+            'name'        => "'$title'",
+            'description' => "'$description'",
+            'imageName'   => "'$fileName'",
+            'imageSize'   => $file['size'],
+            'imageType'   => "'$fileType'",
+            'imagePath'   => "'$uploadPath'",
+            'addedOn'     => "'$uploadTime'"
         );
         $db = new DB();
         $itemID = $db->insert('item', $fileData);
         $queryArgs = array(
             'collection_id' => "'$collectionID'",
-            'item_id'       => "'$itemID'"
+            'item_id'       => "'$itemID'",
         );
         $db->insert('collection_item', $queryArgs);
         $queryArgs = array(
