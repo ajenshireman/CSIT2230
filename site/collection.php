@@ -15,15 +15,15 @@ $collectionID = $_POST['collectionID'];
 // Get the contents of the collection
 $db = new DB();
 $queryArgs = array(
-    'select' => "ci.collection_id as 'COLLECTIONID', ci.item_id as 'ITEMID', c.id, c.name as 'COLLECTIONNAME' i.id, i.imagePath as 'PATH'",
-    'from'   => 'collection as c, item as i, collection_item as ci',
+    'select' => "ci.collection_id as 'COLLECTIONID', ci.item_id as 'ITEMID', c.id, c.name as 'COLLECTIONNAME', i.id, i.imagePath as 'PATH'",
+    'from'   => 'collection c, item i, collection_item ci',
     'where'  => 'i.id = ci.item_id and c.id = ci.collection_id'
 );
-echo $db->getSelect($queryArgs);
-return;
+//echo $db->getSelect($queryArgs);
+//return;
 
 $result = $db->select($queryArgs);
-if ( result ) {
+if ( $result ) {
     $output = '';
     foreach ( $result as $item ) {
         $output .= "<div class=\"collection-item\" data-id=\"{$item['ITEMID']}\">\n";
