@@ -35,13 +35,15 @@ require_once 'includes/head.php';
                         <div class="panel-heading">
                             <h4 class="panel-title" id="collectionName"></h4>
                         </div>
-                        <div class="panel-body collection-grid" id="collectionGrid">
+                        <div class="panel-body">
                             <div id="collectionError" class="message error alert" hidden ></div>
-			    <!--
-                            <div class="collection-item" data-id="">
-                                <img class="itemImageSmall" src="" />
-                            </div>
-			    -->
+			    <div class="collection-grid" id="collectionGrid">
+				<!--
+				<div class="collection-item" data-id="">
+				    <img class="itemImageSmall" src="" />
+				</div>
+				-->
+			    </div>
                         </div>
                     </div>
 		</div>
