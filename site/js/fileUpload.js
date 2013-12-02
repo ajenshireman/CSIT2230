@@ -1,3 +1,15 @@
+$(function(){
+    $('input[name="btnAddItem"]').click(function(e){
+        e.preventDefault();
+        uploadFile();
+    });
+    
+    $('input[name="btnCancelItem"]').click(function(e){
+        e.preventDefault();
+        //uploadFile();
+    });
+});
+
 // Calculate the size of the file in kb, mb, etc
 function bytesToSize ( bytes ) {
    var unit = ['B', 'KB', 'MB', 'GB'];
@@ -20,7 +32,7 @@ function fileSelected () {
 // Upload the file
 function uploadFile () {
     // Get form data
-    var formData = new FormData(document.getElementById('uploadForm'));
+    var formData = new FormData(document.getElementById('addItemForm'));
     
     // Create XMLHttpRequest object
     var xhr = new XMLHttpRequest();
@@ -30,7 +42,7 @@ function uploadFile () {
     xhr.addEventListener('error', uploadError, false);
     xhr.addEventListener('abort', uploadAbort, false);
     // POST the form data
-    xhr.open('POST', 'upload.php');
+    xhr.open('POST', 'addItem.php');
     xhr.send(formData);
 }
 
