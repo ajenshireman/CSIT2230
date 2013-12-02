@@ -1,4 +1,10 @@
 $(function(){
+    // Get the id for the user's Main Collection
+    
+    
+    // Put the info in the panel
+    
+    
     /* Navigation */
     $('nav').on('click', '.collection-nav', function(e){
         e.preventDefault();
@@ -20,6 +26,7 @@ $(function(){
                 $('#collectionError').html(result.message).removeClass('alert-warning alert-success').addClass(errorClass).show();
             }
         });
+        $('#collectionPane').show();
     });
 });
 

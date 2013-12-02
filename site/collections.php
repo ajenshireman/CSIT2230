@@ -31,7 +31,7 @@ require_once 'includes/head.php';
 		    </ul>
 		</nav>
 		<div class="col-xs-12 col-sm-9">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" id="collectionPane" hidden >
                         <div class="panel-heading">
                             <h4 class="panel-title" id="collectionName"></h4>
                         </div>
