@@ -27,7 +27,9 @@ if ( $result ) {
     $output = '';
     foreach ( $result as $item ) {
         $output .= "<div class=\"collection-item\" data-id=\"{$item['ITEMID']}\">\n";
-        $output .= "\t<img class=\"itemImageSmall\" src=\"{$item['PATH']}/{$item['IMAGENAME']}\" />\n";
+        $output .= "\t<a href=\"#\">\n";
+        $output .= "\t\t<img class=\"itemImageSmall\" src=\"{$item['PATH']}{$item['IMAGENAME']}\" />\n";
+        $output .= "\t</a>\n";
         $output .= "</div>\n";
     }
     
