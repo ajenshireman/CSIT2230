@@ -15,14 +15,22 @@ require_once 'includes/head.php';
           <div class="text-left">
               <h3>Changelog</h3>
               <p>
+                <h4><a href="archiv/20131202">2013-12-02</a></h4>
+                <ul>
+                    <li>Completed forms and back-end for creating collections.</li>
+                    <li>Completed forms and back-end for adding items.</li>
+                    <li>Completed page for displaying collections in the grid.</li>
+                </ul>
+              </p>
+              <p>
                 <h4><a href="archive/20131124">2013-11-24</a></h4>
                 <ul>
                     <li><strong>Fix:</strong> When the login and registration form close due to a click outside the form, the reset. The forms do not reset if closed via the nave link. I'm not sure if this is desirable behavior or not, so I'm leaving it in for now.</li>
-                    <li>Built a basic user settings page. Users can veiw their username, email, and joindate; change their email and password; and delete their account.</li>
+                    <li>Built a basic user settings page. Users can view their username, email, and joindate; change their email and password; and delete their account.</li>
                     <li>All datetime fields in the database have been changed to timestamp.</li>
                     <li>New isMain field added to collection table. This is set to true if it is the user's main collection and cannot be deleted by the user.</li>
                     <li>All tables for the database have been created.</li>
-                    <li>A main collection is created for each usr upon registration.</li>
+                    <li>A main collection is created for each user upon registration.</li>
                 </ul>
               </p>
 	      <p>
