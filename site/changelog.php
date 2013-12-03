@@ -15,7 +15,7 @@ require_once 'includes/head.php';
           <div class="text-left">
               <h3>Changelog</h3>
               <p>
-                <h4><a href="archiv/20131202">2013-12-02</a></h4>
+                <h4><a href="archive/20131202">2013-12-02</a></h4>
                 <ul>
                     <li>Completed forms and back-end for creating collections.</li>
                     <li>Completed forms and back-end for adding items.</li>
@@ -36,13 +36,13 @@ require_once 'includes/head.php';
 	      <p>
 		<h4><a href="archive/20131117">2013-11-17</a></h4>
 		<ul>
-		    <li>Work done is no longer tagged by technoogy used. All features are using al of them in some capacity.</li>
+		    <li>Work done is no longer tagged by technology used. All features are using all of them in some capacity.</li>
 		    <li>User accounts are now implemented on the main site. See the <a href="http://blogs.pstcc.edu/awshireman/2013/11/16/csit-2230-week-11/">blog</a> for details.</li>
 		    <li>Collections link only shows up when logged in.</li>
 		    <li>'About', 'Changelog', and 'Archive' are all under the same drop-down labeled 'About'</li>
 		    <li><strong>Issues</strong>
 			<ul>
-			    <li>Forms do not resest when the drop down closes</li>
+			    <li>Forms do not reset when the drop down closes</li>
 			</ul>
 		    </li>
 		</ul>
@@ -66,12 +66,12 @@ require_once 'includes/head.php';
 	      <p>
 		<h4>2013-10-28</h4>
 		<ul>
-		    <li>Very little work on the site these past two weeks; I've been fighting with php and working on a few other small projects as detailed on my blog:<a href="http://blogs.pstcc.edu/awshireman/2013/10/21/csit-2230-week-8-database-design/">Week 8</a> <a href="http://blogs.pstcc.edu/awshireman/2013/10/25/csit-2230-week9-jquery/">Week9</a>.</li>
+		    <li>Very little work on the site these past two weeks; I've been fighting with PHP and working on a few other small projects as detailed on my blog:<a href="http://blogs.pstcc.edu/awshireman/2013/10/21/csit-2230-week-8-database-design/">Week 8</a> <a href="http://blogs.pstcc.edu/awshireman/2013/10/25/csit-2230-week9-jquery/">Week9</a>.</li>
 		    <li><strong>PHP/MySQL/jQuery</strong>
 			<ul>
 			    <li>Got my DB database interaction abstraction class working. Test page <a href="http://ps11.pstcc.edu/~c2230a16/week8/dbtest.php">here</a>.</li>
 			    <li>Project for testing interaction: A couple of tables for tracking changes to the size of the winsxs folder on various Windows machines: Create new machines and create events that changed the size of winsxs.<a href="http://ps11.pstcc.edu/~c2230a16/winsxs/">link</a></li>
-			    <li>Wrote classes for handing user information, reistration, and login. <a href="http://ps11.pstcc.edu/~c2230a16/userTest/">Test page</a></li>
+			    <li>Wrote classes for handing user information, registration, and login. <a href="http://ps11.pstcc.edu/~c2230a16/userTest/">Test page</a></li>
 			    <li>Week 9 assignment: AJAX database query. <a href="http://ps11.pstcc.edu/~c2230a16/week9/">link</a></li>
 			</ul>
 		    </li>
@@ -105,7 +105,7 @@ require_once 'includes/head.php';
                 <ul>
                   <li><strong>PHP</strong>
                     <ul>
-                      <li>Replaced identical parts of the pages with php includes. This will allow easier changes to the Nav-bar and footer, and automaticaly apply the cahnges across the site.<br />
+                      <li>Replaced identical parts of the pages with PHP includes. This will allow easier changes to the Nav-bar and footer, and automatically apply the changes across the site.<br />
                         Still to do: apply the "active" class to the appropriate link using JavaScript.
                       </li>
                     </ul>
@@ -118,11 +118,11 @@ require_once 'includes/head.php';
                   </li>
                   <li><strong>Design/Presentation</strong>
                     <ul>
-                      <li>Replaced the placeholder image with mutiple movie cover images.</li>
-                      <li>Replaced the repetitive mian page with some static data that shoud better represent the finished product.</li>
+                      <li>Replaced the placeholder image with multiple movie cover images.</li>
+                      <li>Replaced the repetitive main page with some static data that should better represent the finished product.</li>
                       <li>Did the same with the Collection Grid page.</li>
                       <li>Added a link to the Collection Grid to the nav bar. This causes the search box to relocate below the rest of the nav bar on small screen sizes. Still working on a fix for this.</li>
-                      <li>Removed the searchbar for now. It was nonfunctional and screwing up the layout.</li>
+                      <li>Removed the search bar for now. It was nonfunctional and screwing up the layout.</li>
                     </ul>
                   </li>
                 </ul>
@@ -130,11 +130,11 @@ require_once 'includes/head.php';
               <p>
                 <h4><a href="archive/20130928">2013-09-28</a></h4>
                 <ul>
-                  <li>Prepared site for showing curent progress to the class</li>
+                  <li>Prepared site for showing current progress to the class</li>
                   <li>Made mockups for <a href="img/mobileLayout.jpg">mobile</a> and <a href="img/desktopLayout.jpg">desktop</a> layouts.</li>
                   <li><strong>JavaScript/jQuery</strong>
                     <ul>
-                      <li>Added grid veiw of collection, accesed by clicking on the collection's title on the main page.</li>
+                      <li>Added grid view of collection, accessed by clicking on the collection's title on the main page.</li>
                       <li>In the grid view, clicking a collection item brings up the item info in a modal dialog</li>
                     </ul>
                   </li>
@@ -145,22 +145,22 @@ require_once 'includes/head.php';
                 <ul>
                   <li><strong>JavaScript/jQuery</strong>
                     <ul>
-                      <li>Cicking on the small item images now brings up the Item information pane</li>
-                      <li>Attemped to hook up js that will change the rating of a movie on hover/cick. This is not working</li>
+                      <li>Clicking on the small item images now brings up the Item information pane</li>
+                      <li>At temped to hook up js that will change the rating of a movie on hover/click. This is not working</li>
                     </ul>
                   </li>
                   <li><strong>Design</strong>
                     <ul>
                       <li>Added the search bar to the about and changelog pages</li>
-                      <li>Changed the "what's New" link to a dropdown with inks to the changeog and the archive page</li>
-                      <li>Began layout for additonal pages for both desktop and mobile</li>
-                      <li>Took a closer look at Foundation. Foundation provides built-in support for side menues which will work great for the mobile site. Moving to Foundation is still feasable at this point, but will be a hassle. The same style menus should be possibe to implement using Bootstrap but wi take some time to figure out.</li>
+                      <li>Changed the "what's New" link to a dropdown with inks to the changelog and the archive page</li>
+                      <li>Began layout for additional pages for both desktop and mobile</li>
+                      <li>Took a closer look at Foundation. Foundation provides built-in support for side menus which will work great for the mobile site. Moving to Foundation is still feasible at this point, but will be a hassle. The same style menus should be possible to implement using Bootstrap but will take some time to figure out.</li>
                     </ul>
                   </li>
                   <li><strong>CSS</strong>
                     <ul>
-                      <li>Began prototyping additional pages: Collection grid veiw, Item Information input form</li>
-                      <li>Attempted to add close button to the Info pane. This is not working propetly</li>
+                      <li>Began prototyping additional pages: Collection grid view, Item Information input form</li>
+                      <li>Attempted to add close button to the Info pane. This is not working properly</li>
                     </ul>
                   </li>
                 </ul>
@@ -194,8 +194,8 @@ require_once 'includes/head.php';
                   <h4><a href="archive/20130901/index.html">2013-09-01</a></h4>
                   <ul>
                       <li>Created the <a href="about.html">about</a> and <a href="#">changelog</a> pages</li>
-                      <li>Created core css and custom css for the project</li>
-                      <li>Began experimenting with css to create the proper look and feel for the site</li>
+                      <li>Created core CSS and custom CSS for the project</li>
+                      <li>Began experimenting with CSS to create the proper look and feel for the site</li>
                       <li>Uploaded the whole thing to ps11 and linked it on my <a href="http://blogs.pstcc.edu/awshireman/" target="blank">blog</a></li>
                   </ul>
               </p>
