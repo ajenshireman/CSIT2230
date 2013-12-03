@@ -40,7 +40,7 @@ ENGINE = InnoDB;
 CREATE TABLE `item` (
   `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `itemType_id` BIGINT(20) UNSIGNED NOT NULL,
-  `name` VARCHAR(255) NULL,
+  `name` VARCHAR(255) NOT NULL,
   `description` TEXT NULL,
   `imagePath` VARCHAR(255) NOT NULL,
   `imageName` VARCHAR(255) NOT NULL,
@@ -51,6 +51,7 @@ CREATE TABLE `item` (
   UNIQUE INDEX `imageLocation` (`imagePath` ASC, `imageName` ASC),
   INDEX `imagePath` (`imagePath` ASC),
   INDEX `imageName` (`imageName` ASC),
+  INDEX `name` (`name` ASC),
   INDEX `fk_item_itemType_id_idx` (`itemType_id` ASC),
   CONSTRAINT `fk_item_itemType_id`
     FOREIGN KEY (`itemType_id`)
