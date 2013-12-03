@@ -17,9 +17,12 @@ require_once 'includes/head.php';
               <p>
                 <h4><a href="archive/20131202">2013-12-02</a></h4>
                 <ul>
+                    <li>Item name and description are now in the item table rather than the movie table.</li>
                     <li>Completed forms and back-end for creating collections.</li>
+                    <li>User-created collections can be deleted, but the main collection can not.</li>
                     <li>Completed forms and back-end for adding items.</li>
-                    <li>Completed page for displaying collections in the grid.</li>
+                    <li>Items added to sub-collections are also added to the main collection.</li>
+                    <li>Completed page for displaying collections grid.</li>
                 </ul>
               </p>
               <p>
